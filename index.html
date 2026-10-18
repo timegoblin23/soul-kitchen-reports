@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soul Kitchen Reports</title>
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --card: #ffffff;
+    --text: #1c1c1a;
+    --muted: #6b6b66;
+    --line: #dedcd5;
+    --accent: #b5542f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161614;
+      --card: #1e1e1b;
+      --text: #f1efe9;
+      --muted: #a3a099;
+      --line: #33322e;
+      --accent: #e08a5f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    padding: 48px 20px;
+  }
+  main { max-width: 860px; margin: 0 auto; }
+  header { margin-bottom: 36px; }
+  .eyebrow {
+    font: 500 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.1; margin: 0 0 10px; letter-spacing: -.02em; }
+  header p { margin: 0; color: var(--muted); max-width: 60ch; }
+  .grid { display: grid; gap: 14px; }
+  a.card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  a.card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card h2 { margin: 0 0 6px; font-size: 19px; letter-spacing: -.01em; }
+  .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  .card span { display: inline-block; margin-top: 14px; font: 500 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--accent); }
+  footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">Meta Ads · Performance</p>
+    <h1>Soul Kitchen Reports</h1>
+    <p>Three views of the account: a full 12-month review, the creative leaders, and who the ads actually reached.</p>
+  </header>
+  <div class="grid">
+    <a class="card" href="12-month-review.html">
+      <h2>12-Month Review</h2>
+      <p>Spend, revenue, ROAS, purchases and the full funnel across the year, with campaign detail and daily charts.</p>
+      <span>Open report →</span>
+    </a>
+    <a class="card" href="creative-top10.html">
+      <h2>Creative Top 10</h2>
+      <p>The ten best performers across revenue, CPA, CTR, CPC and CPM, plus detail on all 17 overlapping creatives.</p>
+      <span>Open report →</span>
+    </a>
+    <a class="card" href="demographics.html">
+      <h2>Demographics</h2>
+      <p>Gender and age performance — spend, revenue, ROAS, CPA and efficiency across every age band.</p>
+      <span>Open report →</span>
+    </a>
+  </div>
+  <footer>Soul Kitchen · Meta ads reporting</footer>
+</main>
+</body>
+</html>

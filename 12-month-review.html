@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Soul Kitchen 12-Month Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#F2F4F6; --bg2:#E9EDF1; --surface:#FFFFFF; --tint:#EDF2FB; --tint2:#E3EAF7;
+  --ink:#16212B; --ink2:#2B3946; --muted:#5B6773; --muted2:#7C8794;
+  --line:#D8DEE4; --line2:#C3CED9;
+  --blue:#2459C7; --blue2:#173F96; --blueSoft:#4F82E8;
+  --green:#1D7A4B; --amber:#B7791F; --red:#C4322B;
+  --c1:#2459C7; --c2:#1D7A4B; --c3:#6B4FA8; --c4:#B7791F;
+  --green-bg:rgba(29,122,75,.09); --green-line:rgba(29,122,75,.32);
+  --amber-bg:rgba(183,121,31,.10); --amber-line:rgba(183,121,31,.34);
+  --shadow:0 1px 2px rgba(22,33,43,.04),0 10px 30px rgba(36,89,199,.06);
+  --font-body:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-display:'Fraunces',Georgia,'Times New Roman',serif;
+  --font-mono:'DM Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F161D; --bg2:#0B1116; --surface:#17212A; --tint:#1C2A3A; --tint2:#22344A;
+    --ink:#E7ECF1; --ink2:#C9D3DC; --muted:#98A5B1; --muted2:#7F8D9A;
+    --line:#2B3946; --line2:#3A4B5C;
+    --blue:#7AA2FF; --blue2:#A9C2FF; --blueSoft:#6B8FE8;
+    --green:#4FCB8B; --amber:#E0A94A; --red:#FF7A70;
+    --c1:#3F6FD8; --c2:#2A8F66; --c3:#8A6BD1; --c4:#A9751C;
+    --green-bg:rgba(79,203,139,.10); --green-line:rgba(79,203,139,.34);
+    --amber-bg:rgba(224,169,74,.10); --amber-line:rgba(224,169,74,.34);
+    --shadow:0 1px 2px rgba(0,0,0,.30),0 10px 30px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F161D; --bg2:#0B1116; --surface:#17212A; --tint:#1C2A3A; --tint2:#22344A;
+  --ink:#E7ECF1; --ink2:#C9D3DC; --muted:#98A5B1; --muted2:#7F8D9A;
+  --line:#2B3946; --line2:#3A4B5C;
+  --blue:#7AA2FF; --blue2:#A9C2FF; --blueSoft:#6B8FE8;
+  --green:#4FCB8B; --amber:#E0A94A; --red:#FF7A70;
+  --c1:#3F6FD8; --c2:#2A8F66; --c3:#8A6BD1; --c4:#A9751C;
+  --green-bg:rgba(79,203,139,.10); --green-line:rgba(79,203,139,.34);
+  --amber-bg:rgba(224,169,74,.10); --amber-line:rgba(224,169,74,.34);
+  --shadow:0 1px 2px rgba(0,0,0,.30),0 10px 30px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font-body);font-size:16px;line-height:1.55;
+  font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;
+}
+.page{
+  max-width:1240px;margin:0 auto;
+  padding-block:44px 76px;
+  padding-left:max(20px,env(safe-area-inset-left,0px));
+  padding-right:max(20px,env(safe-area-inset-right,0px));
+}
+::selection{background:var(--blue);color:#fff}
+a{color:var(--blue)}
+
+/* header */
+.hero{padding:10px 0 34px;border-bottom:1px solid var(--line)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--tint2)}
+h1{font-family:var(--font-display);font-weight:300;font-size:clamp(2.6rem,6.2vw,4.5rem);line-height:1.01;letter-spacing:-.045em;margin:20px 0 16px;max-width:920px;text-wrap:balance}
+h1 em{font-style:italic;color:var(--blue)}
+.lede{font-size:clamp(1rem,1.5vw,1.14rem);color:var(--muted);max-width:74ch;margin:0 0 24px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--font-mono);font-size:11px;color:var(--muted)}
+.hero-meta b{color:var(--ink);font-weight:500}
+.period-chip{display:inline-flex;align-items:center;gap:8px;background:var(--tint);border:1px solid var(--line2);border-radius:999px;padding:5px 12px;color:var(--blue);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.04em}
+
+/* kpi grid */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.kpi{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 16px 15px;min-height:112px;overflow:hidden;box-shadow:var(--shadow)}
+.kpi::before{content:'';position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blueSoft) 55%,transparent)}
+.k-label{font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.k-value{font-size:clamp(1.45rem,2.2vw,1.95rem);font-weight:600;letter-spacing:-.035em;line-height:1.05;color:var(--ink)}
+.k-value small{font-size:.50em;font-weight:500;color:var(--muted);letter-spacing:0;margin-left:2px}
+.k-sub{font-size:11px;color:var(--muted);margin-top:7px;line-height:1.4;max-width:24ch}
+.spark{position:absolute;right:12px;bottom:12px;width:62px;height:24px;opacity:.9}
+
+/* sections */
+section{margin-top:56px;scroll-margin-top:20px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:16px}
+.section-kicker{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:7px}
+h2{font-family:var(--font-display);font-weight:300;font-size:clamp(1.8rem,3.4vw,2.65rem);line-height:1.06;letter-spacing:-.035em;margin:0;text-wrap:balance}
+.section-note{font-size:12.5px;color:var(--muted);max-width:64ch;line-height:1.6;margin:0}
+
+/* panels */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 14px;box-shadow:var(--shadow);min-width:0}
+.panel.tint{background:var(--tint);border-color:var(--line2);box-shadow:none}
+.panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.panel-title{font-size:13.5px;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
+.panel-sub{font-family:var(--font-mono);font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.chart-wrap{position:relative;width:100%;min-width:0}
+.chart-wrap svg{display:block;width:100%;height:auto;overflow:visible}
+.chart-grid{display:grid;gap:14px}
+.chart-grid.two{grid-template-columns:1.6fr 1fr}
+.chart-grid.half{grid-template-columns:1fr 1fr}
+.chart-grid > *{min-width:0}
+.chart-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:2px}
+.chart-title{font-size:13.5px;font-weight:600;letter-spacing:-.01em}
+.chart-sub{font-family:var(--font-mono);font-size:9.5px;color:var(--muted);letter-spacing:.03em;margin-top:2px}
+.chart-legend{display:flex;gap:14px;flex-wrap:wrap;font-family:var(--font-mono);font-size:9.5px;color:var(--muted);padding-top:3px}
+.chart-legend span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.chart-legend i{width:8px;height:8px;border-radius:2px;display:inline-block}
+.chart-legend i.line{width:14px;height:0;border-top:2px solid;background:none;border-radius:0}
+
+/* tables */
+.table-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.table-head{padding:16px 18px 10px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.table-title{font-size:13.5px;font-weight:600;letter-spacing:-.01em}
+.table-note{font-family:var(--font-mono);font-size:9.5px;color:var(--muted);letter-spacing:.03em}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:740px}
+th{font-family:var(--font-mono);font-size:8.8px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right;padding:9px 12px;background:var(--tint);border-bottom:1px solid var(--line);white-space:nowrap;font-weight:400}
+th:first-child{text-align:left;position:sticky;left:0;background:var(--tint);z-index:2}
+td{padding:8px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;font-family:var(--font-mono);font-size:11.4px;color:var(--ink2)}
+td.m{text-align:left;font-family:var(--font-body);font-size:12.2px;font-weight:500;color:var(--ink);position:sticky;left:0;background:var(--surface);z-index:1}
+tbody tr:hover td{background:var(--tint2)}
+tbody tr:hover td.m{background:var(--tint2)}
+tr.total td{background:var(--tint);font-weight:600;border-top:1px solid var(--line2);color:var(--ink)}
+tr.total td.m{background:var(--tint)}
+tr.muted-row td{color:var(--muted)}
+td.dim{color:var(--muted2)}
+.pause{display:inline-block;font-family:var(--font-mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);background:var(--amber-bg);border:1px solid var(--amber-line);border-radius:999px;padding:1px 6px;margin-left:5px;vertical-align:1px}
+.status{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:8.8px;text-transform:uppercase;letter-spacing:.09em;padding:3px 8px;border-radius:999px;border:1px solid var(--line2);color:var(--muted);background:var(--bg);white-space:nowrap}
+.status.paused{color:var(--amber);border-color:var(--amber-line);background:var(--amber-bg)}
+.status.off{color:var(--muted);border-color:var(--line);background:var(--bg2)}
+
+/* campaign cards */
+.campaign-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:18px;box-shadow:var(--shadow)}
+.campaign-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.campaign-kicker{font-family:var(--font-mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.campaign-name{font-family:var(--font-display);font-weight:300;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.08;letter-spacing:-.025em;margin:0}
+.campaign-meta{display:flex;gap:7px 16px;flex-wrap:wrap;font-family:var(--font-mono);font-size:10px;color:var(--muted);margin-top:9px}
+.campaign-stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px;margin:18px 0 0}
+.cstat{background:var(--tint);border:1px solid var(--line);border-radius:9px;padding:10px 12px;min-width:0}
+.cstat .l{font-family:var(--font-mono);font-size:8.6px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cstat .v{font-family:var(--font-mono);font-size:13px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+.campaign-note{font-size:12.2px;color:var(--muted);line-height:1.6;margin:14px 0 0;max-width:90ch}
+.chart-shell{background:var(--tint);border:1px solid var(--line);border-radius:12px;padding:13px 10px 6px;margin-top:14px}
+.table-details{margin-top:12px}
+.table-details summary{cursor:pointer;color:var(--blue);font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;list-style:none}
+.table-details summary::-webkit-details-marker{display:none}
+.table-details summary::before{content:'+ ';font-family:var(--font-mono)}
+.table-details[open] summary::before{content:'− '}
+.table-details .table-scroll{margin-top:10px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.mini-table{min-width:600px}
+
+/* insights */
+.insights{display:grid;gap:10px}
+.insight{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.insight.blue{background:var(--tint);border-color:var(--line2)}
+.insight.warn{background:var(--amber-bg);border-color:var(--amber-line)}
+.insight.good{background:var(--green-bg);border-color:var(--green-line)}
+.insight .ico{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-mono);font-size:11px;font-weight:500;background:var(--blue);color:#fff;flex-shrink:0}
+.insight.warn .ico{background:var(--amber);color:#fff}
+.insight.good .ico{background:var(--green);color:#fff}
+.insight h4{font-size:13.5px;font-weight:600;margin:0 0 4px;letter-spacing:-.01em}
+.insight p{font-size:12.4px;color:var(--muted);line-height:1.65;margin:0;max-width:100ch}
+.insight strong{color:var(--ink);font-weight:600}
+
+/* definitions + footer */
+.defs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.def{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:13px 15px}
+.def b{display:block;font-family:var(--font-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.def p{font-size:11.8px;color:var(--muted);margin:0;line-height:1.55}
+.footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.footer p{font-family:var(--font-mono);font-size:10px;color:var(--muted);line-height:1.8;margin:0}
+.footer b{color:var(--ink);font-weight:500}
+
+/* tooltip */
+.tooltip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);border-radius:8px;padding:8px 10px;font-family:var(--font-mono);font-size:10px;line-height:1.55;z-index:8;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.20);opacity:0;transition:opacity .12s ease}
+.tooltip.show{opacity:1}
+.tooltip b{font-weight:500;color:inherit}
+.tooltip .t-row{display:flex;justify-content:space-between;gap:14px}
+.tooltip .t-key{opacity:.7}
+.tooltip .t-val{font-variant-numeric:tabular-nums}
+
+/* responsive */
+@media (max-width:1000px){
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .campaign-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .defs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chart-grid.two,.chart-grid.half{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .page{padding-block:28px 56px}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .kpi{padding:13px 13px 12px;min-height:102px}
+  .k-sub{max-width:100%}
+  .spark{display:none}
+  .campaign-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .campaign-card{padding:16px}
+  .defs{grid-template-columns:1fr}
+  .hero{padding-bottom:26px}
+  .section-head{gap:8px}
+  .chart-legend{gap:10px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important}
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+
+  <header class="hero">
+    <div class="eyebrow"><span class="dot"></span><span>Soul Kitchen · Meta Ads · 12-month review</span></div>
+    <h1>Twelve months, <em>measured</em>.</h1>
+    <p class="lede">£186,263 of spend produced £436,778 of Meta-attributed revenue — a 2.35x blended return across 19,062 purchases. The account ran hard from January to April, went dark for three months, then restarted in September with a very different cost profile.</p>
+    <div class="hero-meta">
+      <span class="period-chip">1 Oct 2025 – 30 Sep 2026</span>
+      <span>Account <b>969464619911075</b></span>
+      <span>Currency <b>GBP</b></span>
+      <span>First delivery <b>8 Oct 2025</b></span>
+      <span>Pulled <b>18 Oct 2026</b></span>
+    </div>
+  </header>
+
+  <div class="kpis"><div class="kpi">
+      <div class="k-label">Spend</div>
+      <div class="k-value">£186,263</div>
+      <div class="k-sub">12 months · £15,522 monthly average</div>
+      <svg class="spark" data-spark="spend" aria-hidden="true"></svg>
+    </div><div class="kpi">
+      <div class="k-label">Revenue</div>
+      <div class="k-value">£436,778</div>
+      <div class="k-sub">Meta-attributed purchase value</div>
+      <svg class="spark" data-spark="revenue" aria-hidden="true"></svg>
+    </div><div class="kpi">
+      <div class="k-label">ROAS</div>
+      <div class="k-value">2.35x</div>
+      <div class="k-sub">Blended · 1.91x on the 2025 campaign</div>
+      <svg class="spark" data-spark="roas" aria-hidden="true"></svg>
+    </div><div class="kpi">
+      <div class="k-label">Purchases</div>
+      <div class="k-value">19,062</div>
+      <div class="k-sub">£9.77 cost per purchase</div>
+      <svg class="spark" data-spark="purch" aria-hidden="true"></svg>
+    </div><div class="kpi">
+      <div class="k-label">AOV</div>
+      <div class="k-value">£22.91</div>
+      <div class="k-sub">£18.28 in Oct → £25.80 in Sep</div>
+      
+    </div><div class="kpi">
+      <div class="k-label">Link CTR</div>
+      <div class="k-value">1.86%</div>
+      <div class="k-sub">3.57% CTR on all clicks</div>
+      
+    </div><div class="kpi">
+      <div class="k-label">CPM</div>
+      <div class="k-value">£14.34</div>
+      <div class="k-sub">£11.83 low · £20.24 high month</div>
+      
+    </div><div class="kpi">
+      <div class="k-label">CPC (link)</div>
+      <div class="k-value">£0.77</div>
+      <div class="k-sub">£0.40 on all clicks</div>
+      
+    </div><div class="kpi">
+      <div class="k-label">Landing view rate</div>
+      <div class="k-value">64.9%</div>
+      <div class="k-sub">Landing views ÷ link clicks</div>
+      
+    </div><div class="kpi">
+      <div class="k-label">Add-to-cart rate</div>
+      <div class="k-value">35.9%</div>
+      <div class="k-sub">Adds to cart ÷ landing views</div>
+      
+    </div><div class="kpi">
+      <div class="k-label">Checkout rate</div>
+      <div class="k-value">34.2%</div>
+      <div class="k-sub">Checkouts ÷ landing views</div>
+      
+    </div><div class="kpi">
+      <div class="k-label">Conversion rate</div>
+      <div class="k-value">12.2%</div>
+      <div class="k-sub">Purchases ÷ landing views</div>
+      
+    </div></div>
+
+  <section id="monthly">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">01 · Month by month</div>
+        <h2>The year in twelve rows.</h2>
+      </div>
+      <p class="section-note">Rates are indexed to landing page views so they stay comparable across months. Spend and revenue are in GBP. June to August had no delivery.</p>
+    </div>
+
+    <div class="chart-grid two" style="margin-bottom:14px">
+      <div class="panel tint">
+        <div class="panel-head"><div class="panel-title">Spend and attributed revenue</div><div class="panel-sub">GBP · monthly</div></div>
+        <div class="chart-wrap" data-chart="spend-revenue"></div>
+        <div class="chart-legend"><span><i style="background:var(--c1)"></i>Spend</span><span><i style="background:var(--c2)"></i>Revenue</span></div>
+      </div>
+      <div class="panel tint">
+        <div class="panel-head"><div class="panel-title">ROAS</div><div class="panel-sub">Revenue ÷ spend</div></div>
+        <div class="chart-wrap" data-chart="roas"></div>
+        <div class="chart-legend"><span><i class="line" style="border-color:var(--c1)"></i>Monthly ROAS</span><span><i class="line" style="border-color:var(--ink)"></i>12-month average</span></div>
+      </div>
+    </div>
+
+    <div class="chart-grid half" style="margin-bottom:14px">
+      <div class="panel tint">
+        <div class="panel-head"><div class="panel-title">Purchases</div><div class="panel-sub">Attributed · monthly</div></div>
+        <div class="chart-wrap" data-chart="purchases"></div>
+      </div>
+      <div class="panel tint">
+        <div class="panel-head"><div class="panel-title">Average order value</div><div class="panel-sub">GBP · monthly</div></div>
+        <div class="chart-wrap" data-chart="aov"></div>
+      </div>
+    </div>
+
+    <div class="panel tint" style="margin-bottom:14px">
+      <div class="panel-head"><div class="panel-title">Funnel rates</div><div class="panel-sub">Each stage ÷ landing page views</div></div>
+      <div class="chart-wrap" data-chart="funnel"></div>
+      <div class="chart-legend">
+        <span><i class="line" style="border-color:var(--c1)"></i>Landing view rate</span>
+        <span><i class="line" style="border-color:var(--c2);border-top-style:dashed"></i>Add-to-cart rate</span>
+        <span><i class="line" style="border-color:var(--c3);border-top-style:dotted"></i>Checkout rate</span>
+        <span><i class="line" style="border-color:var(--c4)"></i>Conversion rate</span>
+      </div>
+    </div>
+
+    <div class="table-card" style="margin-bottom:14px">
+      <div class="table-head"><div class="table-title">Traffic and delivery</div><div class="table-note">All clicks and link clicks shown separately</div></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Month</th><th>Spend</th><th>Impressions</th><th>Link clicks</th><th>CTR (all)</th><th>Link CTR</th><th>CPM</th><th>CPC (all)</th><th>CPC (link)</th><th>Landing views</th><th>LPV rate</th></tr></thead>
+          <tbody><tr><td class="m">Oct 2025</td><td class="">£10,040</td><td class="">565,538</td><td class="">15,140</td><td class="">4.66%</td><td class="">2.68%</td><td class="">£17.75</td><td class="">£0.38</td><td class="">£0.66</td><td class="">11,067</td><td class="">73.1%</td></tr><tr><td class="m">Nov 2025</td><td class="">£8,052</td><td class="">397,755</td><td class="">10,543</td><td class="">4.18%</td><td class="">2.65%</td><td class="">£20.24</td><td class="">£0.48</td><td class="">£0.76</td><td class="">7,176</td><td class="">68.1%</td></tr><tr><td class="m">Dec 2025</td><td class="">£12,717</td><td class="">671,972</td><td class="">14,933</td><td class="">3.42%</td><td class="">2.22%</td><td class="">£18.92</td><td class="">£0.55</td><td class="">£0.85</td><td class="">10,335</td><td class="">69.2%</td></tr><tr><td class="m">Jan 2026</td><td class="">£37,092</td><td class="">2,555,117</td><td class="">48,901</td><td class="">3.42%</td><td class="">1.91%</td><td class="">£14.52</td><td class="">£0.42</td><td class="">£0.76</td><td class="">32,116</td><td class="">65.7%</td></tr><tr><td class="m">Feb 2026</td><td class="">£33,160</td><td class="">2,339,733</td><td class="">37,242</td><td class="">3.02%</td><td class="">1.59%</td><td class="">£14.17</td><td class="">£0.47</td><td class="">£0.89</td><td class="">22,879</td><td class="">61.4%</td></tr><tr><td class="m">Mar 2026</td><td class="">£36,748</td><td class="">2,496,616</td><td class="">37,071</td><td class="">2.58%</td><td class="">1.48%</td><td class="">£14.72</td><td class="">£0.57</td><td class="">£0.99</td><td class="">23,061</td><td class="">62.2%</td></tr><tr><td class="m">Apr 2026</td><td class="">£24,627</td><td class="">1,993,827</td><td class="">25,783</td><td class="">2.67%</td><td class="">1.29%</td><td class="">£12.35</td><td class="">£0.46</td><td class="">£0.96</td><td class="">16,084</td><td class="">62.4%</td></tr><tr><td class="m">May 2026</td><td class="">£8,889</td><td class="">751,141</td><td class="">9,836</td><td class="">2.31%</td><td class="">1.31%</td><td class="">£11.83</td><td class="">£0.51</td><td class="">£0.90</td><td class="">6,011</td><td class="">61.1%</td></tr><tr><td class="m">Jun 2026 <span class="pause">paused</span></td><td class="dim">£0</td><td class="dim">0</td><td class="dim">0</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td></tr><tr><td class="m">Jul 2026 <span class="pause">paused</span></td><td class="dim">£0</td><td class="dim">0</td><td class="dim">0</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td></tr><tr><td class="m">Aug 2026 <span class="pause">paused</span></td><td class="dim">£0</td><td class="dim">0</td><td class="dim">0</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td></tr><tr><td class="m">Sep 2026</td><td class="">£14,940</td><td class="">1,220,347</td><td class="">42,389</td><td class="">8.56%</td><td class="">3.47%</td><td class="">£12.24</td><td class="">£0.14</td><td class="">£0.35</td><td class="">28,128</td><td class="">66.4%</td></tr><tr class='total'><td>12 months</td><td>£186,263</td><td>12,992,046</td><td>241,838</td><td>3.57%</td><td>1.86%</td><td>£14.34</td><td>£0.40</td><td>£0.77</td><td>156,857</td><td>64.9%</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <div class="table-head"><div class="table-title">Commerce and conversion</div><div class="table-note">Revenue = Meta purchase ROAS × spend</div></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Month</th><th>Adds to cart</th><th>ATC rate</th><th>Checkouts</th><th>Checkout rate</th><th>Purchases</th><th>Conversion rate</th><th>Revenue</th><th>AOV</th><th>ROAS</th></tr></thead>
+          <tbody><tr><td class="m">Oct 2025</td><td class="">4,165</td><td class="">37.6%</td><td class="">5,169</td><td class="">46.7%</td><td class="">1,119</td><td class="">10.1%</td><td class="">£20,461</td><td class="">£18.28</td><td class="">2.04x</td></tr><tr><td class="m">Nov 2025</td><td class="">3,202</td><td class="">44.6%</td><td class="">3,037</td><td class="">42.3%</td><td class="">851</td><td class="">11.9%</td><td class="">£17,530</td><td class="">£20.60</td><td class="">2.18x</td></tr><tr><td class="m">Dec 2025</td><td class="">4,400</td><td class="">42.6%</td><td class="">4,271</td><td class="">41.3%</td><td class="">1,251</td><td class="">12.1%</td><td class="">£28,842</td><td class="">£23.06</td><td class="">2.27x</td></tr><tr><td class="m">Jan 2026</td><td class="">13,068</td><td class="">40.7%</td><td class="">12,446</td><td class="">38.8%</td><td class="">3,772</td><td class="">11.7%</td><td class="">£84,075</td><td class="">£22.29</td><td class="">2.27x</td></tr><tr><td class="m">Feb 2026</td><td class="">9,130</td><td class="">39.9%</td><td class="">8,783</td><td class="">38.4%</td><td class="">2,695</td><td class="">11.8%</td><td class="">£59,850</td><td class="">£22.21</td><td class="">1.80x</td></tr><tr><td class="m">Mar 2026</td><td class="">8,526</td><td class="">37.0%</td><td class="">8,031</td><td class="">34.8%</td><td class="">2,796</td><td class="">12.1%</td><td class="">£63,075</td><td class="">£22.56</td><td class="">1.72x</td></tr><tr><td class="m">Apr 2026</td><td class="">5,590</td><td class="">34.8%</td><td class="">5,286</td><td class="">32.9%</td><td class="">1,727</td><td class="">10.7%</td><td class="">£39,034</td><td class="">£22.60</td><td class="">1.59x</td></tr><tr><td class="m">May 2026</td><td class="">1,845</td><td class="">30.7%</td><td class="">1,747</td><td class="">29.1%</td><td class="">580</td><td class="">9.7%</td><td class="">£13,703</td><td class="">£23.63</td><td class="">1.54x</td></tr><tr><td class="m">Jun 2026 <span class="pause">paused</span></td><td class="dim">0</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td><td class="dim">£0</td><td class="dim">—</td><td class="dim">—</td></tr><tr><td class="m">Jul 2026 <span class="pause">paused</span></td><td class="dim">0</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td><td class="dim">£0</td><td class="dim">—</td><td class="dim">—</td></tr><tr><td class="m">Aug 2026 <span class="pause">paused</span></td><td class="dim">0</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td><td class="dim">0</td><td class="dim">—</td><td class="dim">£0</td><td class="dim">—</td><td class="dim">—</td></tr><tr><td class="m">Sep 2026</td><td class="">6,450</td><td class="">22.9%</td><td class="">4,941</td><td class="">17.6%</td><td class="">4,271</td><td class="">15.2%</td><td class="">£110,209</td><td class="">£25.80</td><td class="">7.38x</td></tr><tr class='total'><td>12 months</td><td>56,376</td><td>35.9%</td><td>53,711</td><td>34.2%</td><td>19,062</td><td>12.2%</td><td>£436,778</td><td>£22.91</td><td>2.35x</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="campaigns">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">02 · Campaigns</div>
+        <h2>Two campaigns carried the year.</h2>
+      </div>
+      <p class="section-note">Eight campaigns exist on the account. Only two delivered in the window: the 2025 Advantage campaign and the September 2026 relaunch. The rest are inactive or recorded no spend.</p>
+    </div>
+
+    <div class="table-card">
+      <div class="table-head"><div class="table-title">All campaigns in the account</div><div class="table-note">Window · 1 Oct 2025 – 30 Sep 2026</div></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Campaign</th><th>Delivery</th><th>Status</th><th>Spend</th><th>Link clicks</th><th>Purchases</th><th>ROAS</th><th>AOV</th></tr></thead>
+          <tbody><tr><td class="m">Advantage 2025 New</td><td>8 Oct 2025 – 26 May 2026</td><td><span class="status paused">Paused</span></td><td class="">£171,322.96</td><td class="">199,449</td><td class="">14,791</td><td class="">1.91x</td><td class="">£22.07</td></tr><tr><td class="m">Advantage Plus 2026</td><td>17 Sep 2026 – 24 Sep 2026</td><td><span class="status paused">Paused</span></td><td class="">£14,939.67</td><td class="">42,389</td><td class="">4,271</td><td class="">7.36x</td><td class="">£25.76</td></tr><tr class='muted-row'><td class="m">Advantage+ Shopping</td><td>No delivery in window</td><td><span class="status off">Inactive</span></td><td>£0.00</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='muted-row'><td class="m">MOF / BOF [Active]</td><td>No delivery in window</td><td><span class="status off">Inactive</span></td><td>£0.00</td><td>0</td><td>1*</td><td>—</td><td>—</td></tr><tr class='muted-row'><td class="m">TOF | Creative Testing [Broad + Excl]</td><td>No delivery in window</td><td><span class="status off">Inactive</span></td><td>£0.00</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='muted-row'><td class="m">BFCM ASC Shopping Campaign</td><td>No delivery in window</td><td><span class="status off">Inactive</span></td><td>£0.00</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='muted-row'><td class="m">ASC Scaling Campaign</td><td>No delivery in window</td><td><span class="status off">Inactive</span></td><td>£0.00</td><td>0</td><td>0</td><td>—</td><td>—</td></tr><tr class='muted-row'><td class="m">TOF | Creative Testing [ADV+]</td><td>No delivery in window</td><td><span class="status off">Inactive</span></td><td>£0.00</td><td>0</td><td>4*</td><td>—</td><td>—</td></tr><tr class='total'><td>Total · active campaigns</td><td>8 Oct 2025 – 30 Sep 2026</td><td></td><td>£186,262.63</td><td>241,838</td><td>19,062</td><td>2.35x</td><td>£22.91</td></tr></tbody>
+        </table>
+      </div>
+      <div class="table-head" style="padding-top:0"><div class="table-note">* Attributed purchases recorded with no spend in the window. These rows are excluded from the total.</div></div>
+    </div>
+
+    <article class="campaign-card">
+      <div class="campaign-top">
+        <div>
+          <div class="campaign-kicker">Campaign 1</div>
+          <h3 class="campaign-name">Advantage 2025 New</h3>
+          <div class="campaign-meta">
+            <span>8 Oct 2025 – 26 May 2026</span>
+            <span>214 delivery days</span>
+            <span>231 days in the data</span>
+            <span>£801 average per delivery day</span>
+          </div>
+        </div>
+        <span class="status paused">Paused</span>
+      </div>
+      <div class="campaign-stats"><div class="cstat"><div class="l">Spend</div><div class="v">£171,322.96</div></div><div class="cstat"><div class="l">Revenue</div><div class="v">£326,378.71</div></div><div class="cstat"><div class="l">Purchases</div><div class="v">14,791</div></div><div class="cstat"><div class="l">Link clicks</div><div class="v">199,449</div></div><div class="cstat"><div class="l">ROAS</div><div class="v">1.91x</div></div><div class="cstat"><div class="l">AOV</div><div class="v">£22.07</div></div></div>
+      <p class="campaign-note">The account's workhorse: 92% of the year's spend and 78% of its purchases. Delivery ran from 8 October 2025 to 26 May 2026, then stopped.</p>
+      <div class="chart-shell">
+        <div class="chart-title-row">
+          <div>
+            <div class="chart-title">Daily delivery</div>
+            <div class="chart-sub">Purchases, link clicks, spend and ROAS · hover for the day</div>
+          </div>
+          <div class="chart-legend">
+            <span><i style="background:var(--c1)"></i>Purchases</span>
+            <span><i class="line" style="border-color:var(--c1)"></i>Clicks / spend</span>
+            <span><i style="background:var(--c2)"></i>ROAS</span>
+          </div>
+        </div>
+        <div class="chart-wrap campaign-chart" data-campaign-chart="0"></div>
+      </div>
+      <details class="table-details">
+        <summary>Monthly table for this campaign</summary>
+        <div class="table-scroll">
+          <table class="mini-table">
+            <thead><tr><th>Month</th><th>Spend</th><th>Link clicks</th><th>Purchases</th><th>Revenue</th><th>ROAS</th><th>AOV</th></tr></thead>
+            <tbody><tr><td class="m">Oct 2025</td><td class="">£10,039.97</td><td class="">15,140</td><td class="">1,119</td><td class="">£20,460.62</td><td class="">2.04x</td><td class="">£18.28</td></tr><tr><td class="m">Nov 2025</td><td class="">£8,051.57</td><td class="">10,543</td><td class="">851</td><td class="">£17,374.05</td><td class="">2.16x</td><td class="">£20.42</td></tr><tr><td class="m">Dec 2025</td><td class="">£12,716.62</td><td class="">14,933</td><td class="">1,251</td><td class="">£28,808.13</td><td class="">2.27x</td><td class="">£23.03</td></tr><tr><td class="m">Jan 2026</td><td class="">£37,091.91</td><td class="">48,901</td><td class="">3,772</td><td class="">£84,074.96</td><td class="">2.27x</td><td class="">£22.29</td></tr><tr><td class="m">Feb 2026</td><td class="">£33,159.69</td><td class="">37,242</td><td class="">2,695</td><td class="">£59,849.61</td><td class="">1.80x</td><td class="">£22.21</td></tr><tr><td class="m">Mar 2026</td><td class="">£36,747.87</td><td class="">37,071</td><td class="">2,796</td><td class="">£63,074.99</td><td class="">1.72x</td><td class="">£22.56</td></tr><tr><td class="m">Apr 2026</td><td class="">£24,626.64</td><td class="">25,783</td><td class="">1,727</td><td class="">£39,033.69</td><td class="">1.58x</td><td class="">£22.60</td></tr><tr><td class="m">May 2026</td><td class="">£8,888.69</td><td class="">9,836</td><td class="">580</td><td class="">£13,702.66</td><td class="">1.54x</td><td class="">£23.63</td></tr><tr class='total'><td>Total</td><td>£171,322.96</td><td>199,449</td><td>14,791</td><td>£326,378.71</td><td>1.91x</td><td>£22.07</td></tr></tbody>
+          </table>
+        </div>
+      </details>
+    </article><article class="campaign-card">
+      <div class="campaign-top">
+        <div>
+          <div class="campaign-kicker">Campaign 2</div>
+          <h3 class="campaign-name">Advantage Plus 2026</h3>
+          <div class="campaign-meta">
+            <span>17 Sep 2026 – 24 Sep 2026</span>
+            <span>8 delivery days</span>
+            <span>14 days in the data · through 30 Sep 2026</span>
+            <span>£1,867 average per delivery day</span>
+          </div>
+        </div>
+        <span class="status paused">Paused</span>
+      </div>
+      <div class="campaign-stats"><div class="cstat"><div class="l">Spend</div><div class="v">£14,939.67</div></div><div class="cstat"><div class="l">Revenue</div><div class="v">£110,018.17</div></div><div class="cstat"><div class="l">Purchases</div><div class="v">4,271</div></div><div class="cstat"><div class="l">Link clicks</div><div class="v">42,389</div></div><div class="cstat"><div class="l">ROAS</div><div class="v">7.36x</div></div><div class="cstat"><div class="l">AOV</div><div class="v">£25.76</div></div></div>
+      <p class="campaign-note">The September relaunch delivered for eight days (17–24 September). Purchases recorded after 24 September are attribution tail, not new delivery. Daily figures include those days so the taper is visible.</p>
+      <div class="chart-shell">
+        <div class="chart-title-row">
+          <div>
+            <div class="chart-title">Daily delivery</div>
+            <div class="chart-sub">Purchases, link clicks, spend and ROAS · hover for the day</div>
+          </div>
+          <div class="chart-legend">
+            <span><i style="background:var(--c1)"></i>Purchases</span>
+            <span><i class="line" style="border-color:var(--c1)"></i>Clicks / spend</span>
+            <span><i style="background:var(--c2)"></i>ROAS</span>
+          </div>
+        </div>
+        <div class="chart-wrap campaign-chart" data-campaign-chart="1"></div>
+      </div>
+      <details class="table-details">
+        <summary>Monthly table for this campaign</summary>
+        <div class="table-scroll">
+          <table class="mini-table">
+            <thead><tr><th>Month</th><th>Spend</th><th>Link clicks</th><th>Purchases</th><th>Revenue</th><th>ROAS</th><th>AOV</th></tr></thead>
+            <tbody><tr><td class="m">Sep 2026</td><td class="">£14,939.67</td><td class="">42,389</td><td class="">4,271</td><td class="">£110,018.17</td><td class="">7.36x</td><td class="">£25.76</td></tr><tr class='total'><td>Total</td><td>£14,939.67</td><td>42,389</td><td>4,271</td><td>£110,018.17</td><td>7.36x</td><td>£25.76</td></tr></tbody>
+          </table>
+        </div>
+      </details>
+    </article>
+  </section>
+
+  <section id="read">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">03 · What the data says</div>
+        <h2>Four readings.</h2>
+      </div>
+      <p class="section-note">These are observations from the account data, not recommendations. The next step is to decide which pattern is worth testing.</p>
+    </div>
+    <div class="insights">
+      <div class="insight blue">
+        <div class="ico">1</div>
+        <div><h4>Spend was concentrated in four months.</h4>
+        <p>January to April 2026 accounted for <strong>£131,626</strong>, or <strong>70.7%</strong> of the year's spend. January alone spent <strong>£37,092</strong> and produced <strong>3,772 purchases</strong>, the highest monthly purchase count in the window.</p></div>
+      </div>
+      <div class="insight warn">
+        <div class="ico">2</div>
+        <div><h4>Efficiency stepped down through the spring.</h4>
+        <p>ROAS moved from <strong>2.27x in January</strong> to <strong>1.54x in May</strong>, even as monthly spend was cut from £37.1k to £8.9k. The 2025 campaign stopped delivering on <strong>26 May</strong>. The return fell even as spend came down, so this was not simply a volume problem.</p></div>
+      </div>
+      <div class="insight good">
+        <div class="ico">3</div>
+        <div><h4>September was a different machine.</h4>
+        <p>The relaunch spent <strong>£14,940</strong> in eight delivery days and returned <strong>7.38x</strong> on <strong>4,271 purchases</strong>. Link CPC was <strong>£0.35</strong> against £0.86 on the 2025 campaign, and link CTR was <strong>3.47%</strong> against 1.86% for the 12-month account. Its funnel mix is not like-for-like: checkout rate fell to <strong>17.6%</strong> of landing views while conversion rose to <strong>15.2%</strong>.</p></div>
+      </div>
+      <div class="insight blue">
+        <div class="ico">4</div>
+        <div><h4>Order value moved up while volume moved down.</h4>
+        <p>AOV rose from <strong>£18.28</strong> in October to <strong>£25.80</strong> in September, a <strong>41%</strong> increase. Monthly purchases fell from 3,772 in January to 580 in May before the September relaunch. The account ended the year buying fewer, larger orders.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="definitions">
+    <div class="section-head">
+      <div>
+        <div class="section-kicker">04 · Definitions</div>
+        <h2>How each number is built.</h2>
+      </div>
+      <p class="section-note">Meta event counts are not strictly sequential — checkouts can exceed adds to cart in some months — so every funnel rate is divided by landing page views.</p>
+    </div>
+    <div class="defs">
+      <div class="def"><b>CTR (all)</b><p>All clicks ÷ impressions. Meta's default click metric includes clicks that do not leave for the website.</p></div>
+      <div class="def"><b>Link CTR</b><p>Link clicks ÷ impressions. The cleaner measure of traffic quality.</p></div>
+      <div class="def"><b>CPM</b><p>Spend ÷ impressions × 1,000. The cost of 1,000 impressions.</p></div>
+      <div class="def"><b>CPC (all) / CPC (link)</b><p>Spend ÷ all clicks, and spend ÷ link clicks. Link CPC is the cost of a visit.</p></div>
+      <div class="def"><b>LPV rate</b><p>Landing page views ÷ link clicks. How many clicks survive to a loaded page.</p></div>
+      <div class="def"><b>ATC rate</b><p>Adds to cart ÷ landing page views.</p></div>
+      <div class="def"><b>Checkout rate</b><p>Checkouts initiated ÷ landing page views.</p></div>
+      <div class="def"><b>Conversion rate</b><p>Purchases ÷ landing page views. The overall store conversion from paid traffic.</p></div>
+      <div class="def"><b>AOV</b><p>Attributed revenue ÷ purchases. Revenue is derived from Meta purchase ROAS × spend.</p></div>
+      <div class="def"><b>ROAS</b><p>Meta-attributed purchase revenue ÷ spend. Blended across campaigns in the monthly table.</p></div>
+      <div class="def"><b>Revenue attribution</b><p>Meta-reported purchase value, not the store's banked revenue. It reflects the attribution window and event matching at the time of reporting.</p></div>
+      <div class="def"><b>Data window</b><p>1 Oct 2025 – 30 Sep 2026. First delivery was 8 Oct 2025; June–August 2026 had no spend. Pulled 18 Oct 2026. Account ROAS is Meta's aggregate; campaign revenue is summed from daily ROAS, so the two can differ by under 0.1%.</p></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p><b>Soul Kitchen</b> · Meta ad account 969464619911075<br>Prepared by Poelano · 18 October 2026</p>
+    <p>Source: Meta Ads MCP · currency GBP<br>Figures are rounded for display; tables retain pence where relevant.</p>
+  </footer>
+</div>
+
+<script id="report-data" type="application/json">{"meta":{"client":"Soul Kitchen","account_id":"969464619911075","currency":"GBP","period_start":"2025-10-01","period_end":"2026-09-30","pulled":"2026-10-18","first_delivery":"2025-10-08"},"months":[{"m":"2025-10","label":"Oct 2025","spend":10039.97,"impr":565538,"reach":206797,"clicks":15140,"ctr":4.66,"cpm":17.75,"cpc":0.38,"lpv":11067,"atc":4165,"checkout":5169,"purch":1119,"roas":2.037914,"revenue":20460.6,"linkCtr":2.68,"cpcLink":0.66,"lpvRate":73.1,"atcRate":37.63,"checkoutRate":46.71,"convRate":10.11,"aov":18.28,"cpo":8.97,"checkoutToCart":124.11,"allClicks":26354,"cpcAll":0.38},{"m":"2025-11","label":"Nov 2025","spend":8051.57,"impr":397755,"reach":178096,"clicks":10543,"ctr":4.18,"cpm":20.24,"cpc":0.48,"lpv":7176,"atc":3202,"checkout":3037,"purch":851,"roas":2.177231,"revenue":17530.13,"linkCtr":2.65,"cpcLink":0.76,"lpvRate":68.06,"atcRate":44.62,"checkoutRate":42.32,"convRate":11.86,"aov":20.6,"cpo":9.46,"checkoutToCart":94.85,"allClicks":16626,"cpcAll":0.48},{"m":"2025-12","label":"Dec 2025","spend":12716.62,"impr":671972,"reach":245241,"clicks":14933,"ctr":3.42,"cpm":18.92,"cpc":0.55,"lpv":10335,"atc":4400,"checkout":4271,"purch":1251,"roas":2.268066,"revenue":28842.13,"linkCtr":2.22,"cpcLink":0.85,"lpvRate":69.21,"atcRate":42.57,"checkoutRate":41.33,"convRate":12.1,"aov":23.06,"cpo":10.17,"checkoutToCart":97.07,"allClicks":22981,"cpcAll":0.55},{"m":"2026-01","label":"Jan 2026","spend":37091.91,"impr":2555117,"reach":781500,"clicks":48901,"ctr":3.42,"cpm":14.52,"cpc":0.42,"lpv":32116,"atc":13068,"checkout":12446,"purch":3772,"roas":2.266666,"revenue":84074.97,"linkCtr":1.91,"cpcLink":0.76,"lpvRate":65.68,"atcRate":40.69,"checkoutRate":38.75,"convRate":11.74,"aov":22.29,"cpo":9.83,"checkoutToCart":95.24,"allClicks":87385,"cpcAll":0.42},{"m":"2026-02","label":"Feb 2026","spend":33159.69,"impr":2339733,"reach":734891,"clicks":37242,"ctr":3.02,"cpm":14.17,"cpc":0.47,"lpv":22879,"atc":9130,"checkout":8783,"purch":2695,"roas":1.804891,"revenue":59849.63,"linkCtr":1.59,"cpcLink":0.89,"lpvRate":61.43,"atcRate":39.91,"checkoutRate":38.39,"convRate":11.78,"aov":22.21,"cpo":12.3,"checkoutToCart":96.2,"allClicks":70660,"cpcAll":0.47},{"m":"2026-03","label":"Mar 2026","spend":36747.87,"impr":2496616,"reach":684615,"clicks":37071,"ctr":2.58,"cpm":14.72,"cpc":0.57,"lpv":23061,"atc":8526,"checkout":8031,"purch":2796,"roas":1.716425,"revenue":63074.96,"linkCtr":1.48,"cpcLink":0.99,"lpvRate":62.21,"atcRate":36.97,"checkoutRate":34.83,"convRate":12.12,"aov":22.56,"cpo":13.14,"checkoutToCart":94.19,"allClicks":64413,"cpcAll":0.57},{"m":"2026-04","label":"Apr 2026","spend":24626.64,"impr":1993827,"reach":645528,"clicks":25783,"ctr":2.67,"cpm":12.35,"cpc":0.46,"lpv":16084,"atc":5590,"checkout":5286,"purch":1727,"roas":1.585019,"revenue":39033.69,"linkCtr":1.29,"cpcLink":0.96,"lpvRate":62.38,"atcRate":34.76,"checkoutRate":32.86,"convRate":10.74,"aov":22.6,"cpo":14.26,"checkoutToCart":94.56,"allClicks":53235,"cpcAll":0.46},{"m":"2026-05","label":"May 2026","spend":8888.69,"impr":751141,"reach":320143,"clicks":9836,"ctr":2.31,"cpm":11.83,"cpc":0.51,"lpv":6011,"atc":1845,"checkout":1747,"purch":580,"roas":1.541583,"revenue":13702.65,"linkCtr":1.31,"cpcLink":0.9,"lpvRate":61.11,"atcRate":30.69,"checkoutRate":29.06,"convRate":9.65,"aov":23.63,"cpo":15.33,"checkoutToCart":94.69,"allClicks":17351,"cpcAll":0.51},{"m":"2026-06","label":"Jun 2026","spend":0,"impr":0,"reach":0,"clicks":0,"ctr":null,"cpm":null,"cpc":null,"lpv":0,"atc":0,"checkout":0,"purch":0,"roas":null,"revenue":0,"linkCtr":null,"cpcLink":null,"lpvRate":null,"atcRate":null,"checkoutRate":null,"convRate":null,"aov":null,"cpo":null,"checkoutToCart":null,"allClicks":0,"cpcAll":null},{"m":"2026-07","label":"Jul 2026","spend":0,"impr":0,"reach":0,"clicks":0,"ctr":null,"cpm":null,"cpc":null,"lpv":0,"atc":0,"checkout":0,"purch":0,"roas":null,"revenue":0,"linkCtr":null,"cpcLink":null,"lpvRate":null,"atcRate":null,"checkoutRate":null,"convRate":null,"aov":null,"cpo":null,"checkoutToCart":null,"allClicks":0,"cpcAll":null},{"m":"2026-08","label":"Aug 2026","spend":0,"impr":0,"reach":0,"clicks":0,"ctr":null,"cpm":null,"cpc":null,"lpv":0,"atc":0,"checkout":0,"purch":0,"roas":null,"revenue":0,"linkCtr":null,"cpcLink":null,"lpvRate":null,"atcRate":null,"checkoutRate":null,"convRate":null,"aov":null,"cpo":null,"checkoutToCart":null,"allClicks":0,"cpcAll":null},{"m":"2026-09","label":"Sep 2026","spend":14939.67,"impr":1220347,"reach":517254,"clicks":42389,"ctr":8.56,"cpm":12.24,"cpc":0.14,"lpv":28128,"atc":6450,"checkout":4941,"purch":4271,"roas":7.376951,"revenue":110209.21,"linkCtr":3.47,"cpcLink":0.35,"lpvRate":66.36,"atcRate":22.93,"checkoutRate":17.57,"convRate":15.18,"aov":25.8,"cpo":3.5,"checkoutToCart":76.6,"allClicks":104462,"cpcAll":0.14}],"totals":{"spend":186262.63,"impr":12992046,"reach":4314065,"clicks":241838,"lpv":156857,"atc":56376,"checkout":53711,"purch":19062,"revenue":436777.97,"roas":2.345,"ctr":3.57,"linkCtr":1.86,"cpm":14.34,"cpc":0.77,"lpvRate":64.86,"atcRate":35.94,"checkoutRate":34.24,"convRate":12.15,"aov":22.91,"cpo":9.77,"checkoutToCart":95.27,"allClicks":463467,"cpcAll":0.4,"ctrAll":3.57},"campaigns":[{"id":"120237546012290110","name":"Advantage 2025 New","status":"PAUSED","start":"2025-10-08","end":"2026-05-26","daily":[{"date":"2025-10-08","spend":91.29,"clicks":112.0,"purchases":7.0,"roas":1.303538},{"date":"2025-10-09","spend":203.83,"clicks":329.0,"purchases":13.0,"roas":1.172546},{"date":"2025-10-10","spend":184.38,"clicks":306.0,"purchases":23.0,"roas":2.342933},{"date":"2025-10-11","spend":184.75,"clicks":249.0,"purchases":17.0,"roas":1.553072},{"date":"2025-10-12","spend":205.36,"clicks":265.0,"purchases":20.0,"roas":1.759057},{"date":"2025-10-13","spend":203.63,"clicks":313.0,"purchases":28.0,"roas":2.401807},{"date":"2025-10-14","spend":302.53,"clicks":485.0,"purchases":37.0,"roas":2.24857},{"date":"2025-10-15","spend":317.27,"clicks":534.0,"purchases":34.0,"roas":1.856999},{"date":"2025-10-16","spend":340.69,"clicks":593.0,"purchases":42.0,"roas":2.255012},{"date":"2025-10-17","spend":353.64,"clicks":595.0,"purchases":48.0,"roas":2.43369},{"date":"2025-10-18","spend":353.9,"clicks":622.0,"purchases":47.0,"roas":2.545465},{"date":"2025-10-19","spend":390.56,"clicks":792.0,"purchases":53.0,"roas":2.352673},{"date":"2025-10-20","spend":452.35,"clicks":815.0,"purchases":51.0,"roas":1.940665},{"date":"2025-10-21","spend":594.16,"clicks":1003.0,"purchases":74.0,"roas":2.184008},{"date":"2025-10-22","spend":617.27,"clicks":978.0,"purchases":66.0,"roas":1.862102},{"date":"2025-10-23","spend":570.0,"clicks":779.0,"purchases":59.0,"roas":1.864404},{"date":"2025-10-24","spend":554.78,"clicks":769.0,"purchases":44.0,"roas":1.392624},{"date":"2025-10-25","spend":562.08,"clicks":769.0,"purchases":54.0,"roas":1.685703},{"date":"2025-10-26","spend":622.98,"clicks":851.0,"purchases":69.0,"roas":2.101576},{"date":"2025-10-27","spend":601.72,"clicks":818.0,"purchases":56.0,"roas":1.686482},{"date":"2025-10-28","spend":588.71,"clicks":772.0,"purchases":80.0,"roas":2.651917},{"date":"2025-10-29","spend":584.17,"clicks":834.0,"purchases":57.0,"roas":1.847955},{"date":"2025-10-30","spend":584.97,"clicks":783.0,"purchases":73.0,"roas":2.492846},{"date":"2025-10-31","spend":574.95,"clicks":774.0,"purchases":67.0,"roas":2.234281},{"date":"2025-11-01","spend":572.39,"clicks":821.0,"purchases":82.0,"roas":2.80529},{"date":"2025-11-02","spend":628.47,"clicks":815.0,"purchases":61.0,"roas":2.129028},{"date":"2025-11-03","spend":603.95,"clicks":863.0,"purchases":74.0,"roas":2.369087},{"date":"2025-11-04","spend":583.22,"clicks":840.0,"purchases":83.0,"roas":3.271373},{"date":"2025-11-05","spend":457.9,"clicks":552.0,"purchases":48.0,"roas":2.179231},{"date":"2025-11-06","spend":342.37,"clicks":398.0,"purchases":33.0,"roas":1.749832},{"date":"2025-11-07","spend":344.32,"clicks":407.0,"purchases":43.0,"roas":2.470434},{"date":"2025-11-08","spend":359.79,"clicks":409.0,"purchases":43.0,"roas":2.507907},{"date":"2025-11-09","spend":380.59,"clicks":470.0,"purchases":40.0,"roas":1.641084},{"date":"2025-11-10","spend":357.45,"clicks":494.0,"purchases":18.0,"roas":1.02129},{"date":"2025-11-11","spend":346.48,"clicks":452.0,"purchases":31.0,"roas":1.708583},{"date":"2025-11-12","spend":355.49,"clicks":474.0,"purchases":31.0,"roas":1.66632},{"date":"2025-11-13","spend":339.25,"clicks":420.0,"purchases":34.0,"roas":1.88846},{"date":"2025-11-14","spend":363.34,"clicks":495.0,"purchases":42.0,"roas":2.216574},{"date":"2025-11-15","spend":375.93,"clicks":513.0,"purchases":34.0,"roas":1.974384},{"date":"2025-11-16","spend":387.84,"clicks":520.0,"purchases":46.0,"roas":2.342873},{"date":"2025-11-17","spend":462.73,"clicks":581.0,"purchases":34.0,"roas":1.754717},{"date":"2025-11-18","spend":540.02,"clicks":711.0,"purchases":50.0,"roas":2.252305},{"date":"2025-11-19","spend":250.04,"clicks":308.0,"purchases":19.0,"roas":1.769717},{"date":"2025-11-20","spend":0.0,"clicks":0.0,"purchases":3.0,"roas":null},{"date":"2025-11-21","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-11-22","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-11-23","spend":0.0,"clicks":0.0,"purchases":1.0,"roas":null},{"date":"2025-11-24","spend":0.0,"clicks":0.0,"purchases":1.0,"roas":null},{"date":"2025-11-25","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-11-26","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-11-27","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-11-28","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-11-29","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-11-30","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-12-01","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-12-02","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-12-03","spend":875.04,"clicks":943.0,"purchases":87.0,"roas":2.300889},{"date":"2025-12-04","spend":717.7,"clicks":831.0,"purchases":62.0,"roas":1.978933},{"date":"2025-12-05","spend":856.85,"clicks":982.0,"purchases":93.0,"roas":2.561067},{"date":"2025-12-06","spend":857.42,"clicks":1120.0,"purchases":72.0,"roas":2.062781},{"date":"2025-12-07","spend":550.06,"clicks":824.0,"purchases":59.0,"roas":2.425826},{"date":"2025-12-08","spend":526.04,"clicks":618.0,"purchases":53.0,"roas":2.336438},{"date":"2025-12-09","spend":139.85,"clicks":166.0,"purchases":17.0,"roas":2.610368},{"date":"2025-12-10","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-12-11","spend":768.24,"clicks":710.0,"purchases":49.0,"roas":1.426026},{"date":"2025-12-12","spend":765.96,"clicks":788.0,"purchases":49.0,"roas":1.519218},{"date":"2025-12-13","spend":780.15,"clicks":823.0,"purchases":80.0,"roas":2.284522},{"date":"2025-12-14","spend":552.67,"clicks":671.0,"purchases":64.0,"roas":2.707583},{"date":"2025-12-15","spend":516.36,"clicks":570.0,"purchases":39.0,"roas":1.748819},{"date":"2025-12-16","spend":516.3,"clicks":569.0,"purchases":46.0,"roas":2.165195},{"date":"2025-12-17","spend":499.6,"clicks":539.0,"purchases":49.0,"roas":2.278903},{"date":"2025-12-18","spend":452.89,"clicks":517.0,"purchases":56.0,"roas":2.687739},{"date":"2025-12-19","spend":400.83,"clicks":442.0,"purchases":41.0,"roas":2.411072},{"date":"2025-12-20","spend":390.33,"clicks":484.0,"purchases":42.0,"roas":2.395204},{"date":"2025-12-21","spend":453.23,"clicks":550.0,"purchases":41.0,"roas":2.045231},{"date":"2025-12-22","spend":370.64,"clicks":445.0,"purchases":17.0,"roas":0.85722},{"date":"2025-12-23","spend":332.21,"clicks":395.0,"purchases":34.0,"roas":2.36498},{"date":"2025-12-24","spend":70.47,"clicks":94.0,"purchases":11.0,"roas":2.998155},{"date":"2025-12-25","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-12-26","spend":0.0,"clicks":0.0,"purchases":1.0,"roas":null},{"date":"2025-12-27","spend":0.0,"clicks":0.0,"purchases":0.0,"roas":null},{"date":"2025-12-28","spend":355.21,"clicks":469.0,"purchases":45.0,"roas":3.013457},{"date":"2025-12-29","spend":338.58,"clicks":512.0,"purchases":50.0,"roas":3.45425},{"date":"2025-12-30","spend":330.42,"clicks":461.0,"purchases":42.0,"roas":2.940137},{"date":"2025-12-31","spend":299.57,"clicks":410.0,"purchases":52.0,"roas":4.052208},{"date":"2026-01-01","spend":334.82,"clicks":526.0,"purchases":41.0,"roas":2.739143},{"date":"2026-01-02","spend":324.65,"clicks":519.0,"purchases":45.0,"roas":3.559064},{"date":"2026-01-03","spend":326.74,"clicks":478.0,"purchases":40.0,"roas":2.80584},{"date":"2026-01-04","spend":358.14,"clicks":657.0,"purchases":57.0,"roas":3.814235},{"date":"2026-01-05","spend":485.62,"clicks":862.0,"purchases":104.0,"roas":4.870804},{"date":"2026-01-06","spend":1138.19,"clicks":1626.0,"purchases":140.0,"roas":2.87394},{"date":"2026-01-07","spend":1278.76,"clicks":1891.0,"purchases":152.0,"roas":2.770137},{"date":"2026-01-08","spend":1248.73,"clicks":1780.0,"purchases":161.0,"roas":2.818976},{"date":"2026-01-09","spend":1228.23,"clicks":1832.0,"purchases":156.0,"roas":2.926504},{"date":"2026-01-10","spend":1244.44,"clicks":1942.0,"purchases":157.0,"roas":2.946169},{"date":"2026-01-11","spend":1388.86,"clicks":2199.0,"purchases":189.0,"roas":3.156301},{"date":"2026-01-12","spend":1457.72,"clicks":1773.0,"purchases":149.0,"roas":2.324452},{"date":"2026-01-13","spend":1557.98,"clicks":1881.0,"purchases":143.0,"roas":2.062055},{"date":"2026-01-14","spend":1535.7,"clicks":2033.0,"purchases":126.0,"roas":1.763541},{"date":"2026-01-15","spend":1458.56,"clicks":1837.0,"purchases":126.0,"roas":1.765289},{"date":"2026-01-16","spend":1412.23,"clicks":1436.0,"purchases":75.0,"roas":1.235195},{"date":"2026-01-17","spend":1543.31,"clicks":2250.0,"purchases":155.0,"roas":2.192858},{"date":"2026-01-18","spend":1659.12,"clicks":2492.0,"purchases":140.0,"roas":1.825245},{"date":"2026-01-19","spend":1576.85,"clicks":1923.0,"purchases":142.0,"roas":1.99908},{"date":"2026-01-20","spend":1574.95,"clicks":1716.0,"purchases":135.0,"roas":1.822921},{"date":"2026-01-21","spend":1412.97,"clicks":1596.0,"purchases":133.0,"roas":2.064885},{"date":"2026-01-22","spend":1281.89,"clicks":1564.0,"purchases":94.0,"roas":1.595847},{"date":"2026-01-23","spend":1280.05,"clicks":1533.0,"purchases":133.0,"roas":2.321511},{"date":"2026-01-24","spend":1307.49,"clicks":1716.0,"purchases":112.0,"roas":1.905269},{"date":"2026-01-25","spend":1446.37,"clicks":1894.0,"purchases":156.0,"roas":2.370465},{"date":"2026-01-26","spend":1269.39,"clicks":1554.0,"purchases":103.0,"roas":1.834747},{"date":"2026-01-27","spend":1268.71,"clicks":1611.0,"purchases":116.0,"roas":1.983274},{"date":"2026-01-28","spend":1215.57,"clicks":1428.0,"purchases":103.0,"roas":1.796943},{"date":"2026-01-29","spend":1162.98,"clicks":1377.0,"purchases":128.0,"roas":2.352422},{"date":"2026-01-30","spend":1168.12,"clicks":1438.0,"purchases":128.0,"roas":2.397228},{"date":"2026-01-31","spend":1144.77,"clicks":1537.0,"purchases":133.0,"roas":2.52601},{"date":"2026-02-01","spend":1315.52,"clicks":1773.0,"purchases":122.0,"roas":2.005808},{"date":"2026-02-02","spend":1138.45,"clicks":1413.0,"purchases":96.0,"roas":1.908586},{"date":"2026-02-03","spend":1190.71,"clicks":1355.0,"purchases":100.0,"roas":1.981087},{"date":"2026-02-04","spend":1180.65,"clicks":1368.0,"purchases":101.0,"roas":1.86178},{"date":"2026-02-05","spend":1193.5,"clicks":1416.0,"purchases":97.0,"roas":1.828898},{"date":"2026-02-06","spend":1123.8,"clicks":1411.0,"purchases":97.0,"roas":1.936519},{"date":"2026-02-07","spend":1057.45,"clicks":1217.0,"purchases":112.0,"roas":2.378798},{"date":"2026-02-08","spend":1273.84,"clicks":1398.0,"purchases":111.0,"roas":1.952741},{"date":"2026-02-09","spend":1175.68,"clicks":1255.0,"purchases":84.0,"roas":1.488551},{"date":"2026-02-10","spend":1170.17,"clicks":1280.0,"purchases":78.0,"roas":1.379629},{"date":"2026-02-11","spend":1121.29,"clicks":1258.0,"purchases":86.0,"roas":1.707426},{"date":"2026-02-12","spend":1169.66,"clicks":1292.0,"purchases":80.0,"roas":1.217927},{"date":"2026-02-13","spend":1161.56,"clicks":1349.0,"purchases":107.0,"roas":1.950102},{"date":"2026-02-14","spend":1149.01,"clicks":1324.0,"purchases":86.0,"roas":1.663911},{"date":"2026-02-15","spend":1254.27,"clicks":1376.0,"purchases":122.0,"roas":2.19314},{"date":"2026-02-16","spend":1166.83,"clicks":1234.0,"purchases":79.0,"roas":1.579493},{"date":"2026-02-17","spend":1193.28,"clicks":1319.0,"purchases":97.0,"roas":1.809282},{"date":"2026-02-18","spend":1169.2,"clicks":1178.0,"purchases":66.0,"roas":1.254687},{"date":"2026-02-19","spend":1116.91,"clicks":1140.0,"purchases":62.0,"roas":1.405001},{"date":"2026-02-20","spend":1145.74,"clicks":1180.0,"purchases":81.0,"roas":1.629593},{"date":"2026-02-21","spend":1177.35,"clicks":1291.0,"purchases":107.0,"roas":1.962475},{"date":"2026-02-22","spend":1305.72,"clicks":1546.0,"purchases":113.0,"roas":1.945164},{"date":"2026-02-23","spend":1170.53,"clicks":1201.0,"purchases":77.0,"roas":1.587341},{"date":"2026-02-24","spend":1242.11,"clicks":1389.0,"purchases":92.0,"roas":1.64768},{"date":"2026-02-25","spend":1305.47,"clicks":1391.0,"purchases":121.0,"roas":2.055298},{"date":"2026-02-26","spend":1173.78,"clicks":1299.0,"purchases":98.0,"roas":1.848651},{"date":"2026-02-27","spend":1144.26,"clicks":1312.0,"purchases":111.0,"roas":2.144329},{"date":"2026-02-28","spend":1172.95,"clicks":1277.0,"purchases":112.0,"roas":2.149069},{"date":"2026-03-01","spend":1335.14,"clicks":1570.0,"purchases":150.0,"roas":2.654261},{"date":"2026-03-02","spend":1200.07,"clicks":1372.0,"purchases":113.0,"roas":2.26376},{"date":"2026-03-03","spend":1294.09,"clicks":1280.0,"purchases":95.0,"roas":1.659467},{"date":"2026-03-04","spend":1262.58,"clicks":1255.0,"purchases":91.0,"roas":1.658382},{"date":"2026-03-05","spend":1207.53,"clicks":1330.0,"purchases":91.0,"roas":1.607082},{"date":"2026-03-06","spend":1176.48,"clicks":1342.0,"purchases":93.0,"roas":1.727314},{"date":"2026-03-07","spend":1161.62,"clicks":1300.0,"purchases":95.0,"roas":1.78443},{"date":"2026-03-08","spend":1266.56,"clicks":1272.0,"purchases":105.0,"roas":1.819424},{"date":"2026-03-09","spend":1208.76,"clicks":1311.0,"purchases":98.0,"roas":1.786782},{"date":"2026-03-10","spend":1336.2,"clicks":1308.0,"purchases":107.0,"roas":1.755411},{"date":"2026-03-11","spend":1240.77,"clicks":1267.0,"purchases":82.0,"roas":1.437188},{"date":"2026-03-12","spend":1130.92,"clicks":1128.0,"purchases":85.0,"roas":1.690217},{"date":"2026-03-13","spend":1104.74,"clicks":1222.0,"purchases":82.0,"roas":1.689692},{"date":"2026-03-14","spend":1095.83,"clicks":1131.0,"purchases":89.0,"roas":1.812927},{"date":"2026-03-15","spend":1302.54,"clicks":1283.0,"purchases":99.0,"roas":1.718888},{"date":"2026-03-16","spend":1220.89,"clicks":1263.0,"purchases":116.0,"roas":2.137408},{"date":"2026-03-17","spend":1390.28,"clicks":1345.0,"purchases":90.0,"roas":1.430367},{"date":"2026-03-18","spend":1017.66,"clicks":994.0,"purchases":79.0,"roas":1.864984},{"date":"2026-03-19","spend":1001.23,"clicks":935.0,"purchases":53.0,"roas":1.151673},{"date":"2026-03-20","spend":967.76,"clicks":922.0,"purchases":68.0,"roas":1.61103},{"date":"2026-03-21","spend":1045.15,"clicks":966.0,"purchases":77.0,"roas":1.678592},{"date":"2026-03-22","spend":1207.22,"clicks":1171.0,"purchases":87.0,"roas":1.715503},{"date":"2026-03-23","spend":1108.21,"clicks":1040.0,"purchases":64.0,"roas":1.312251},{"date":"2026-03-24","spend":1180.66,"clicks":1093.0,"purchases":82.0,"roas":1.568496},{"date":"2026-03-25","spend":1246.13,"clicks":1165.0,"purchases":101.0,"roas":1.717397},{"date":"2026-03-26","spend":1159.9,"clicks":1025.0,"purchases":81.0,"roas":1.609303},{"date":"2026-03-27","spend":1136.54,"clicks":988.0,"purchases":90.0,"roas":1.755336},{"date":"2026-03-28","spend":1141.69,"clicks":1103.0,"purchases":96.0,"roas":1.893763},{"date":"2026-03-29","spend":1314.68,"clicks":1317.0,"purchases":101.0,"roas":1.781802},{"date":"2026-03-30","spend":1185.63,"clicks":1247.0,"purchases":63.0,"roas":1.175519},{"date":"2026-03-31","spend":1100.41,"clicks":1126.0,"purchases":73.0,"roas":1.536745},{"date":"2026-04-01","spend":1012.11,"clicks":1078.0,"purchases":73.0,"roas":1.595084},{"date":"2026-04-02","spend":987.74,"clicks":1031.0,"purchases":64.0,"roas":1.406332},{"date":"2026-04-03","spend":970.31,"clicks":1001.0,"purchases":59.0,"roas":1.412631},{"date":"2026-04-04","spend":969.79,"clicks":1072.0,"purchases":90.0,"roas":2.07416},{"date":"2026-04-05","spend":1079.66,"clicks":1223.0,"purchases":82.0,"roas":1.64386},{"date":"2026-04-06","spend":1040.27,"clicks":1226.0,"purchases":91.0,"roas":1.949648},{"date":"2026-04-07","spend":994.22,"clicks":1015.0,"purchases":57.0,"roas":1.279083},{"date":"2026-04-08","spend":1024.26,"clicks":1009.0,"purchases":69.0,"roas":1.413518},{"date":"2026-04-09","spend":1050.15,"clicks":1103.0,"purchases":57.0,"roas":1.159844},{"date":"2026-04-10","spend":959.67,"clicks":966.0,"purchases":61.0,"roas":1.444215},{"date":"2026-04-11","spend":991.77,"clicks":1065.0,"purchases":64.0,"roas":1.477853},{"date":"2026-04-12","spend":1124.82,"clicks":1202.0,"purchases":85.0,"roas":1.7667},{"date":"2026-04-13","spend":989.03,"clicks":1019.0,"purchases":73.0,"roas":1.631518},{"date":"2026-04-14","spend":908.23,"clicks":870.0,"purchases":81.0,"roas":2.182905},{"date":"2026-04-15","spend":692.83,"clicks":823.0,"purchases":76.0,"roas":2.482802},{"date":"2026-04-16","spend":658.19,"clicks":728.0,"purchases":44.0,"roas":1.650375},{"date":"2026-04-17","spend":626.74,"clicks":740.0,"purchases":54.0,"roas":1.884785},{"date":"2026-04-18","spend":639.42,"clicks":764.0,"purchases":48.0,"roas":1.695818},{"date":"2026-04-19","spend":763.95,"clicks":774.0,"purchases":50.0,"roas":1.43389},{"date":"2026-04-20","spend":685.68,"clicks":757.0,"purchases":65.0,"roas":2.184663},{"date":"2026-04-21","spend":721.63,"clicks":753.0,"purchases":50.0,"roas":1.613652},{"date":"2026-04-22","spend":707.05,"clicks":672.0,"purchases":43.0,"roas":1.42113},{"date":"2026-04-23","spend":672.49,"clicks":690.0,"purchases":38.0,"roas":1.321031},{"date":"2026-04-24","spend":675.17,"clicks":611.0,"purchases":29.0,"roas":0.983027},{"date":"2026-04-25","spend":672.65,"clicks":678.0,"purchases":50.0,"roas":1.611284},{"date":"2026-04-26","spend":758.25,"clicks":717.0,"purchases":42.0,"roas":1.404326},{"date":"2026-04-27","spend":660.52,"clicks":638.0,"purchases":42.0,"roas":1.419049},{"date":"2026-04-28","spend":573.48,"clicks":615.0,"purchases":40.0,"roas":1.556916},{"date":"2026-04-29","spend":535.42,"clicks":528.0,"purchases":24.0,"roas":0.992249},{"date":"2026-04-30","spend":481.14,"clicks":415.0,"purchases":26.0,"roas":1.196242},{"date":"2026-05-01","spend":504.16,"clicks":471.0,"purchases":39.0,"roas":1.720129},{"date":"2026-05-02","spend":446.29,"clicks":420.0,"purchases":30.0,"roas":1.640525},{"date":"2026-05-03","spend":564.48,"clicks":586.0,"purchases":29.0,"roas":1.177172},{"date":"2026-05-04","spend":554.76,"clicks":649.0,"purchases":40.0,"roas":1.705278},{"date":"2026-05-05","spend":437.32,"clicks":511.0,"purchases":20.0,"roas":1.031785},{"date":"2026-05-06","spend":523.46,"clicks":532.0,"purchases":26.0,"roas":1.201257},{"date":"2026-05-07","spend":499.52,"clicks":569.0,"purchases":30.0,"roas":1.438661},{"date":"2026-05-08","spend":476.6,"clicks":507.0,"purchases":23.0,"roas":1.153945},{"date":"2026-05-09","spend":441.52,"clicks":515.0,"purchases":34.0,"roas":1.719084},{"date":"2026-05-10","spend":570.46,"clicks":709.0,"purchases":33.0,"roas":1.304491},{"date":"2026-05-11","spend":316.05,"clicks":348.0,"purchases":19.0,"roas":1.390381},{"date":"2026-05-12","spend":252.7,"clicks":235.0,"purchases":24.0,"roas":2.586981},{"date":"2026-05-13","spend":267.4,"clicks":331.0,"purchases":31.0,"roas":2.522214},{"date":"2026-05-14","spend":235.65,"clicks":268.0,"purchases":12.0,"roas":1.696923},{"date":"2026-05-15","spend":217.9,"clicks":271.0,"purchases":26.0,"roas":3.273428},{"date":"2026-05-16","spend":224.76,"clicks":279.0,"purchases":14.0,"roas":1.16898},{"date":"2026-05-17","spend":287.28,"clicks":368.0,"purchases":22.0,"roas":1.994431},{"date":"2026-05-18","spend":249.9,"clicks":276.0,"purchases":19.0,"roas":1.552661},{"date":"2026-05-19","spend":249.42,"clicks":350.0,"purchases":20.0,"roas":1.887419},{"date":"2026-05-20","spend":237.61,"clicks":296.0,"purchases":17.0,"roas":1.55629},{"date":"2026-05-21","spend":235.95,"clicks":244.0,"purchases":14.0,"roas":1.279975},{"date":"2026-05-22","spend":250.66,"clicks":244.0,"purchases":13.0,"roas":1.17426},{"date":"2026-05-23","spend":238.98,"clicks":227.0,"purchases":15.0,"roas":1.584568},{"date":"2026-05-24","spend":275.24,"clicks":276.0,"purchases":12.0,"roas":1.058458},{"date":"2026-05-25","spend":267.7,"clicks":287.0,"purchases":15.0,"roas":1.331341},{"date":"2026-05-26","spend":62.92,"clicks":67.0,"purchases":3.0,"roas":1.163223}],"spend":171322.96,"clicks":199449.0,"purchases":14791.0,"revenue":326378.71,"roas":1.905,"aov":22.07,"days":231,"monthly":[{"m":"2025-10","spend":10039.97,"clicks":15140.0,"purchases":1119.0,"revenue":20460.62,"roas":2.038,"aov":18.28},{"m":"2025-11","spend":8051.57,"clicks":10543.0,"purchases":851.0,"revenue":17374.05,"roas":2.158,"aov":20.42},{"m":"2025-12","spend":12716.62,"clicks":14933.0,"purchases":1251.0,"revenue":28808.13,"roas":2.265,"aov":23.03},{"m":"2026-01","spend":37091.91,"clicks":48901.0,"purchases":3772.0,"revenue":84074.96,"roas":2.267,"aov":22.29},{"m":"2026-02","spend":33159.69,"clicks":37242.0,"purchases":2695.0,"revenue":59849.61,"roas":1.805,"aov":22.21},{"m":"2026-03","spend":36747.87,"clicks":37071.0,"purchases":2796.0,"revenue":63074.99,"roas":1.716,"aov":22.56},{"m":"2026-04","spend":24626.64,"clicks":25783.0,"purchases":1727.0,"revenue":39033.69,"roas":1.585,"aov":22.6},{"m":"2026-05","spend":8888.69,"clicks":9836.0,"purchases":580.0,"revenue":13702.66,"roas":1.542,"aov":23.63}],"deliveryDays":214,"delivery_end":"2026-05-26"},{"id":"120255173755450110","name":"Advantage Plus 2026","status":"PAUSED","start":"2026-09-17","end":"2026-09-30","daily":[{"date":"2026-09-17","spend":212.33,"clicks":641,"purchases":76,"roas":9.160364},{"date":"2026-09-18","spend":1390.88,"clicks":3976,"purchases":641,"roas":11.765271},{"date":"2026-09-19","spend":1857.06,"clicks":6122,"purchases":640,"roas":8.884662},{"date":"2026-09-20","spend":2535.64,"clicks":9213,"purchases":860,"roas":8.793953},{"date":"2026-09-21","spend":2069.77,"clicks":6020,"purchases":565,"roas":7.083724},{"date":"2026-09-22","spend":2392.04,"clicks":5856,"purchases":588,"roas":6.336148},{"date":"2026-09-23","spend":2763.47,"clicks":6500,"purchases":546,"roas":5.132847},{"date":"2026-09-24","spend":1718.48,"clicks":4061,"purchases":345,"roas":5.184203},{"date":"2026-09-25","spend":0,"clicks":0,"purchases":8,"roas":null},{"date":"2026-09-26","spend":0,"clicks":0,"purchases":0,"roas":null},{"date":"2026-09-27","spend":0,"clicks":0,"purchases":1,"roas":null},{"date":"2026-09-28","spend":0,"clicks":0,"purchases":0,"roas":null},{"date":"2026-09-29","spend":0,"clicks":0,"purchases":0,"roas":null},{"date":"2026-09-30","spend":0,"clicks":0,"purchases":1,"roas":null}],"spend":14939.67,"clicks":42389,"purchases":4271,"revenue":110018.17,"roas":7.364,"aov":25.76,"days":14,"monthly":[{"m":"2026-09","spend":14939.67,"clicks":42389,"purchases":4271,"revenue":110018.17,"roas":7.364,"aov":25.76}],"deliveryDays":8,"delivery_end":"2026-09-24"}],"inactive":[{"id":"120219435358250110","name":"Advantage+ Shopping","start":"2025-03-04","spend":0,"clicks":0,"purchases":0,"roas":null},{"id":"120215544747270110","name":"MOF / BOF [Active]","start":"2024-12-12","spend":0,"clicks":0,"purchases":1,"roas":null},{"id":"120215251360830110","name":"TOF | Creative Testing [Broad + Excl]","start":"2024-12-02","spend":0,"clicks":0,"purchases":0,"roas":null},{"id":"120215099049920110","name":"BFCM ASC Shopping Campaign","start":"2024-11-27","spend":0,"clicks":0,"purchases":0,"roas":null},{"id":"120214898323690110","name":"ASC Scaling Campaign","start":"2024-11-20","spend":0,"clicks":0,"purchases":0,"roas":null},{"id":"120213335296000110","name":"TOF | Creative Testing [ADV+]","start":"2024-10-05","spend":0,"clicks":0,"purchases":4,"roas":null}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('report-data').textContent);
+const NS = 'http://www.w3.org/2000/svg';
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => Array.from(el.querySelectorAll(s));
+
+function svgEl(tag, attrs={}, text){
+  const e = document.createElementNS(NS, tag);
+  for (const [k,v] of Object.entries(attrs)) if (v !== null && v !== undefined) e.setAttribute(k,v);
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+function clear(node){ while(node.firstChild) node.removeChild(node.firstChild); }
+function debounce(fn, ms){ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),ms); }; }
+function css(n){ return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+function pal(){
+  return {c1:css('--c1'),c2:css('--c2'),c3:css('--c3'),c4:css('--c4'),
+    ink:css('--ink'),muted:css('--muted'),muted2:css('--muted2'),line:css('--line'),
+    line2:css('--line2'),surface:css('--surface'),tint:css('--tint'),bg:css('--bg'),
+    blue:css('--blue'),green:css('--green'),amber:css('--amber')};
+}
+const gbp=(v,dp=0)=> v==null||isNaN(v) ? '—' : '£'+Number(v).toLocaleString('en-GB',{minimumFractionDigits:dp,maximumFractionDigits:dp});
+const int=(v)=> v==null||isNaN(v) ? '—' : Math.round(v).toLocaleString('en-GB');
+const pct=(v,dp=1)=> v==null||isNaN(v) ? '—' : Number(v).toFixed(dp)+'%';
+const xx=(v,dp=2)=> v==null||isNaN(v) ? '—' : Number(v).toFixed(dp)+'x';
+const compact=(v)=>{ if(v==null||isNaN(v)) return '—'; const a=Math.abs(v);
+  if(a>=1e6) return (v/1e6).toFixed(1).replace(/\.0$/,'')+'m';
+  if(a>=1e3) return (v/1e3).toFixed(a>=1e4?0:1).replace(/\.0$/,'')+'k';
+  return Math.round(v).toString(); };
+const MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const monthShort=m=>MONTHS[+m.split('-')[1]-1];
+const monthLong=m=>monthShort(m)+' '+m.split('-')[0];
+const dayLabel=d=>{ const dt=new Date(d+'T12:00:00'); return dt.toLocaleDateString('en-GB',{day:'numeric',month:'short'}); };
+
+function niceCeil(v){
+  if(!v || v<=0) return 1;
+  const p=Math.pow(10,Math.floor(Math.log10(v)));
+  const n=v/p, steps=[1,1.2,1.5,2,2.5,3,4,5,6,8,10];
+  const s=steps.find(s=>n<=s)||10;
+  return s*p;
+}
+function barPath(x,y,w,h,r){
+  r=Math.max(0,Math.min(r,w/2,h));
+  return `M${x},${y+h} L${x},${y+r} Q${x},${y} ${x+r},${y} L${x+w-r},${y} Q${x+w},${y} ${x+w},${y+r} L${x+w},${y+h} Z`;
+}
+function segments(vals){
+  const out=[]; let cur=[];
+  vals.forEach((v,i)=>{ if(v==null){ if(cur.length) out.push(cur); cur=[]; } else cur.push([i,v]); });
+  if(cur.length) out.push(cur);
+  return out;
+}
+function tooltipEl(container){
+  let t=container.querySelector(':scope > .tooltip');
+  if(!t){ t=document.createElement('div'); t.className='tooltip'; container.appendChild(t); }
+  return t;
+}
+function tipRows(rows){
+  return rows.map(r=>`<div class="t-row"><span class="t-key">${r[0]}</span><span class="t-val">${r[1]}</span></div>`).join('');
+}
+function showTip(container, html, x, y){
+  const t=tooltipEl(container);
+  t.innerHTML=html; t.classList.add('show');
+  const cw=container.clientWidth, th=t.offsetHeight, tw=t.offsetWidth;
+  const left=Math.max(8,Math.min(cw-tw-8, x-tw/2));
+  const top=Math.max(4, Math.min(container.clientHeight-th-4, y-th-10));
+  t.style.left=left+'px'; t.style.top=top+'px';
+}
+function hideTip(container){ const t=tooltipEl(container); t.classList.remove('show'); }
+
+/* ---------- sparkline ---------- */
+function sparkline(el, vals, color){
+  const w=62,h=24,pad=2;
+  clear(el);
+  el.setAttribute('viewBox',`0 0 ${w} ${h}`);
+  el.setAttribute('preserveAspectRatio','none');
+  const clean=vals.map(v=>v==null?null:Number(v));
+  const max=Math.max(...clean.filter(v=>v!=null),1);
+  const min=Math.min(...clean.filter(v=>v!=null),0);
+  const x=i=>pad+(i/(vals.length-1))*(w-pad*2);
+  const y=v=>h-pad-((v-min)/(max-min||1))*(h-pad*2);
+  const segs=segments(clean);
+  segs.forEach(seg=>{
+    if(seg.length<2) return;
+    const d=seg.map(([i,v],k)=>`${k?'L':'M'}${x(i).toFixed(2)},${y(v).toFixed(2)}`).join(' ');
+    el.appendChild(svgEl('path',{d,fill:'none',stroke:color,'stroke-width':1.8,'stroke-linecap':'round','stroke-linejoin':'round'}));
+  });
+  const last=clean.map((v,i)=>[i,v]).filter(([i,v])=>v!=null).pop();
+  if(last) el.appendChild(svgEl('circle',{cx:x(last[0]),cy:y(last[1]),r:2.2,fill:color}));
+}
+
+/* ---------- monthly grouped bars ---------- */
+function groupedBars(container, months, series, opts={}){
+  const width=Math.max(320,container.clientWidth||600);
+  const height=opts.height||248;
+  const m={l:50,r:10,t:30,b:30};
+  const w=width-m.l-m.r, h=height-m.t-m.b;
+  const p=pal();
+  const max=niceCeil(Math.max(...series.flatMap(s=>s.values.map(v=>v||0)),1));
+  const n=months.length, band=w/n;
+  const gap=Math.max(2,band*0.07);
+  const barW=Math.min(24,(band-gap*2)/2);
+  clear(container);
+  const svg=svgEl('svg',{viewBox:`0 0 ${width} ${height}`,role:'img','aria-label':opts.aria||'Monthly chart'});
+  container.appendChild(svg);
+
+  // paused band
+  const paused=months.map((mo,i)=>({i,spend:mo.spend})).filter(x=>x.spend===0);
+  if(paused.length){
+    const start=paused[0].i, end=paused[paused.length-1].i;
+    svg.appendChild(svgEl('rect',{x:m.l+start*band+1,y:m.t-8,width:(end-start+1)*band-2,height:h+8,fill:p.muted,opacity:.055,rx:4}));
+    svg.appendChild(svgEl('text',{x:m.l+(start+end+1)*band/2,y:m.t+2,'text-anchor':'middle',fill:p.muted,'font-size':8.5,'font-family':'var(--font-mono)','letter-spacing':'.08em'},'PAUSED'));
+  }
+
+  // grid
+  for(let i=0;i<=4;i++){
+    const y=m.t+h-(i/4)*h;
+    svg.appendChild(svgEl('line',{x1:m.l,x2:m.l+w,y1:y,y2:y,stroke:p.line,'stroke-width':i===0?1:0.6,'stroke-dasharray':i===0?'':'2 4'}));
+    svg.appendChild(svgEl('text',{x:m.l-8,y:y+3,'text-anchor':'end',fill:p.muted,'font-size':9,'font-family':'var(--font-mono)'},i===0?'£0':'£'+compact(max*i/4)));
+  }
+
+  // bars
+  const bars=[];
+  months.forEach((mo,i)=>{
+    const cx=m.l+band*i+band/2;
+    series.forEach((s,si)=>{
+      const v=s.values[i]||0;
+      if(v<=0) return;
+      const bh=Math.max(0,(v/max)*h);
+      const x=cx-(barW+gap/2)+si*(barW+gap);
+      const y=m.t+h-bh;
+      const rect=svgEl('path',{d:barPath(x,y,barW,bh,3),fill:s.color,opacity:.96});
+      svg.appendChild(rect); bars.push(rect);
+    });
+  });
+
+  // x labels
+  const step=width<640?2:1;
+  months.forEach((mo,i)=>{
+    if(i%step!==0 && i!==n-1) return;
+    svg.appendChild(svgEl('text',{x:m.l+band*i+band/2,y:height-8,'text-anchor':'middle',fill:p.muted,'font-size':9,'font-family':'var(--font-mono)'},monthShort(mo.m)));
+  });
+
+  // direct labels: max revenue and last revenue
+  if(opts.directLabels!==false){
+    const rev=series[series.length-1];
+    let maxI=0; rev.values.forEach((v,i)=>{ if((v||0)>(rev.values[maxI]||0)) maxI=i; });
+    const lastI=n-1;
+    [maxI,lastI].filter((v,i,a)=>a.indexOf(v)===i).forEach(i=>{
+      const v=rev.values[i]||0; if(v<=0) return;
+      const bh=(v/max)*h;
+      const cx=m.l+band*i+band/2;
+      svg.appendChild(svgEl('text',{x:cx,y:m.t+h-bh-7,'text-anchor':'middle',fill:rev.color,'font-size':9.5,'font-family':'var(--font-mono)','font-weight':500},'£'+compact(v)));
+    });
+  }
+
+  // hover
+  months.forEach((mo,i)=>{
+    const r=svgEl('rect',{x:m.l+band*i,y:m.t,width:band,height:h,fill:'transparent',style:'cursor:crosshair'});
+    const rows=series.map(s=>[s.label, s.fmt? s.fmt(s.values[i]) : (s.values[i]??'—')]);
+    r.addEventListener('pointerenter',ev=>{ bars.forEach(b=>b.setAttribute('opacity','.55')); showTip(container,`<b>${monthLong(mo.m)}</b>${tipRows(rows)}`, m.l+band*i+band/2, ev.offsetY); });
+    r.addEventListener('pointermove',ev=>{ showTip(container,`<b>${monthLong(mo.m)}</b>${tipRows(rows)}`, m.l+band*i+band/2, ev.offsetY); });
+    r.addEventListener('pointerleave',()=>{ bars.forEach(b=>b.setAttribute('opacity','.96')); hideTip(container); });
+    svg.appendChild(r);
+  });
+}
+
+/* ---------- monthly line chart ---------- */
+function lineChart(container, months, series, opts={}){
+  const width=Math.max(320,container.clientWidth||600);
+  const height=opts.height||248;
+  const m={l:46,r:opts.endLabels===false?12:66,t:30,b:30};
+  const w=width-m.l-m.r, h=height-m.t-m.b;
+  const p=pal();
+  const all=series.flatMap(s=>s.values.filter(v=>v!=null));
+  const max=opts.yMax||niceCeil(Math.max(...all,1));
+  const min=opts.yMin||0;
+  const n=months.length, band=w/n;
+  const x=i=>m.l+band*i+band/2;
+  const y=v=>m.t+h-((v-min)/(max-min||1))*h;
+  clear(container);
+  const svg=svgEl('svg',{viewBox:`0 0 ${width} ${height}`,role:'img','aria-label':opts.aria||'Monthly trend'});
+  container.appendChild(svg);
+
+  // paused band
+  const paused=months.map((mo,i)=>({i,spend:mo.spend})).filter(x=>x.spend===0);
+  if(paused.length){
+    const start=paused[0].i, end=paused[paused.length-1].i;
+    svg.appendChild(svgEl('rect',{x:m.l+start*band+1,y:m.t-8,width:(end-start+1)*band-2,height:h+8,fill:p.muted,opacity:.055,rx:4}));
+    svg.appendChild(svgEl('text',{x:m.l+(start+end+1)*band/2,y:m.t+2,'text-anchor':'middle',fill:p.muted,'font-size':8.5,'font-family':'var(--font-mono)','letter-spacing':'.08em'},'PAUSED'));
+  }
+
+  for(let i=0;i<=4;i++){
+    const yy=m.t+h-(i/4)*h;
+    svg.appendChild(svgEl('line',{x1:m.l,x2:m.l+w,y1:yy,y2:yy,stroke:p.line,'stroke-width':i===0?1:0.6,'stroke-dasharray':i===0?'':'2 4'}));
+    const val=min+(max-min)*i/4;
+    svg.appendChild(svgEl('text',{x:m.l-8,y:yy+3,'text-anchor':'end',fill:p.muted,'font-size':9,'font-family':'var(--font-mono)'},opts.yFmt?opts.yFmt(val):compact(val)));
+  }
+
+  if(opts.average!=null){
+    const ay=y(opts.average);
+    svg.appendChild(svgEl('line',{x1:m.l,x2:m.l+w,y1:ay,y2:ay,stroke:p.ink,'stroke-width':1,'stroke-dasharray':'4 4',opacity:.45}));
+    svg.appendChild(svgEl('text',{x:m.l+w,y:ay-5,'text-anchor':'end',fill:p.muted,'font-size':8.5,'font-family':'var(--font-mono)'},`avg ${opts.avgFmt?opts.avgFmt(opts.average):compact(opts.average)}`));
+  }
+
+  series.forEach(s=>{
+    const segs=segments(s.values.map(v=>v==null?null:Number(v)));
+    segs.forEach(seg=>{
+      const d=seg.map(([i,v],k)=>`${k?'L':'M'}${x(i).toFixed(2)},${y(v).toFixed(2)}`).join(' ');
+      if(seg.length>1) svg.appendChild(svgEl('path',{d,fill:'none',stroke:s.color,'stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round','stroke-dasharray':s.dash||''}));
+      seg.forEach(([i,v])=>{
+        svg.appendChild(svgEl('circle',{cx:x(i),cy:y(v),r:3.2,fill:s.color,stroke:p.surface,'stroke-width':1.6}));
+      });
+    });
+  });
+
+  // x labels
+  const step=width<640?2:1;
+  months.forEach((mo,i)=>{
+    if(i%step!==0 && i!==n-1) return;
+    svg.appendChild(svgEl('text',{x:x(i),y:height-8,'text-anchor':'middle',fill:p.muted,'font-size':9,'font-family':'var(--font-mono)'},monthShort(mo.m)));
+  });
+
+  // end labels with collision avoidance
+  if(opts.endLabels!==false){
+    const labels=[];
+    series.forEach(s=>{
+      let li=-1; s.values.forEach((v,i)=>{ if(v!=null) li=i; });
+      if(li<0) return;
+      labels.push({i:li,v:s.values[li],y:y(s.values[li]),color:s.color,label:s.label});
+    });
+    labels.sort((a,b)=>a.y-b.y);
+    const minGap=13;
+    for(let k=1;k<labels.length;k++) if(labels[k].y-labels[k-1].y<minGap) labels[k].y=labels[k-1].y+minGap;
+    labels.forEach(l=>{
+      const lx=Math.min(width-4, x(l.i)+9);
+      const ly=Math.max(10,Math.min(height-6,l.y+3));
+      svg.appendChild(svgEl('text',{x:lx,y:ly,fill:l.color,'font-size':9,'font-family':'var(--font-mono)','font-weight':500},opts.endFmt?opts.endFmt(l.v):compact(l.v)));
+    });
+  }
+
+  // hover
+  months.forEach((mo,i)=>{
+    const r=svgEl('rect',{x:m.l+band*i,y:m.t,width:band,height:h,fill:'transparent',style:'cursor:crosshair'});
+    const rows=series.map(s=>[s.label, s.fmt? s.fmt(s.values[i]) : (s.values[i]==null?'—':compact(s.values[i]))]);
+    r.addEventListener('pointerenter',ev=>showTip(container,`<b>${monthLong(mo.m)}</b>${tipRows(rows)}`, x(i), ev.offsetY));
+    r.addEventListener('pointermove',ev=>showTip(container,`<b>${monthLong(mo.m)}</b>${tipRows(rows)}`, x(i), ev.offsetY));
+    r.addEventListener('pointerleave',()=>hideTip(container));
+    svg.appendChild(r);
+  });
+}
+
+/* ---------- campaign daily chart: four aligned panels ---------- */
+function campaignChart(container, camp){
+  const width=Math.max(320,container.clientWidth||700);
+  const m={l:52,r:16,t:26,b:38};
+  const plotW=width-m.l-m.r;
+  const panelH=104, gap=27;
+  const height=m.t+panelH*4+gap*3+m.b;
+  const p=pal();
+  const data=camp.daily;
+  const n=data.length;
+  const band=plotW/n;
+  const cx=i=>m.l+band*i+band/2;
+  clear(container);
+  const svg=svgEl('svg',{viewBox:`0 0 ${width} ${height}`,role:'img','aria-label':`Daily purchases, clicks, spend and ROAS for ${camp.name}`});
+  container.appendChild(svg);
+
+  const panels=[
+    {key:'purchases',label:'Purchases',color:p.c1,type:'bar',fmt:int,total:int(camp.purchases)},
+    {key:'clicks',label:'Link clicks',color:p.c1,type:'line',fmt:int,total:int(camp.clicks)},
+    {key:'spend',label:'Spend',color:p.c1,type:'line',fmt:v=>gbp(v),total:gbp(camp.spend)},
+    {key:'roas',label:'ROAS',color:p.c2,type:'line',fmt:v=>xx(v,2),total:xx(camp.roas,2)},
+  ];
+
+  const panelTops=[];
+  panels.forEach((panel,pi)=>{
+    const top=m.t+pi*(panelH+gap);
+    panelTops.push(top);
+    const vals=data.map(d=>d[panel.key]);
+    const max=niceCeil(Math.max(...vals.filter(v=>v!=null),1));
+    const y=v=>top+panelH-((v||0)/max)*panelH;
+
+    // title + total
+    svg.appendChild(svgEl('text',{x:m.l,y:top-8,fill:p.ink,'font-size':10.5,'font-family':'var(--font-mono)','font-weight':500},panel.label.toUpperCase()));
+    svg.appendChild(svgEl('text',{x:width-m.r,y:top-8,'text-anchor':'end',fill:p.muted,'font-size':9,'font-family':'var(--font-mono)'},'total '+panel.total));
+
+    // grid
+    [0,0.5,1].forEach(f=>{
+      const yy=top+panelH-(f*panelH);
+      svg.appendChild(svgEl('line',{x1:m.l,x2:m.l+plotW,y1:yy,y2:yy,stroke:p.line,'stroke-width':f===0?1:0.6,'stroke-dasharray':f===0?'':'2 4'}));
+      svg.appendChild(svgEl('text',{x:m.l-8,y:yy+3,'text-anchor':'end',fill:p.muted,'font-size':8.5,'font-family':'var(--font-mono)'},f===0?'0':compact(max*f)));
+    });
+
+    if(panel.type==='bar'){
+      const bw=Math.max(1,band*0.72);
+      data.forEach((d,i)=>{
+        const v=d[panel.key]||0; if(v<=0) return;
+        const bh=(v/max)*panelH;
+        svg.appendChild(svgEl('path',{d:barPath(cx(i)-bw/2,top+panelH-bh,bw,bh,Math.min(2,bw/2)),fill:panel.color,opacity:.92}));
+      });
+    } else {
+      // area + line
+      const segs=segments(vals.map(v=>v==null?null:Number(v)));
+      segs.forEach(seg=>{
+        if(seg.length<2) return;
+        const line=seg.map(([i,v],k)=>`${k?'L':'M'}${cx(i).toFixed(2)},${y(v).toFixed(2)}`).join(' ');
+        const area=line+` L${cx(seg[seg.length-1][0]).toFixed(2)},${top+panelH} L${cx(seg[0][0]).toFixed(2)},${top+panelH} Z`;
+        svg.appendChild(svgEl('path',{d:area,fill:panel.color,opacity:.10}));
+        svg.appendChild(svgEl('path',{d:line,fill:'none',stroke:panel.color,'stroke-width':1.8,'stroke-linecap':'round','stroke-linejoin':'round'}));
+      });
+      // average line for ROAS
+      if(panel.key==='roas' && camp.roas){
+        const ay=y(camp.roas);
+        svg.appendChild(svgEl('line',{x1:m.l,x2:m.l+plotW,y1:ay,y2:ay,stroke:p.c2,'stroke-width':1,'stroke-dasharray':'4 4',opacity:.55}));
+      }
+    }
+  });
+
+  // x axis
+  const ticks = n<=16 ? Array.from({length:Math.ceil(n/2)},(_,k)=>k*2) : [0,Math.round((n-1)*0.2),Math.round((n-1)*0.4),Math.round((n-1)*0.6),Math.round((n-1)*0.8),n-1];
+  ticks.filter((v,i,a)=>a.indexOf(v)===i && v>=0 && v<n).forEach(i=>{
+    svg.appendChild(svgEl('text',{x:cx(i),y:height-12,'text-anchor':i===0?'start':(i===n-1?'end':'middle'),fill:p.muted,'font-size':9,'font-family':'var(--font-mono)'},dayLabel(data[i].date)));
+  });
+
+  // crosshair group
+  const cross=svgEl('g',{opacity:'0','pointer-events':'none'});
+  const crossLine=svgEl('line',{x1:0,x2:0,y1:panelTops[0]-6,y2:panelTops[3]+panelH,stroke:p.ink,'stroke-width':1,'stroke-dasharray':'3 3',opacity:.6});
+  cross.appendChild(crossLine);
+  const dots=panels.map((panel,pi)=>{
+    const c=svgEl('circle',{cx:0,cy:0,r:3.4,fill:panel.color,stroke:p.surface,'stroke-width':1.6});
+    cross.appendChild(c); return c;
+  });
+  svg.appendChild(cross);
+
+  const overlay=svgEl('rect',{x:m.l,y:panelTops[0]-6,width:plotW,height:panelTops[3]+panelH-(panelTops[0]-6),fill:'transparent',style:'cursor:crosshair'});
+  svg.appendChild(overlay);
+
+  function update(ev){
+    const rect=svg.getBoundingClientRect();
+    const px=(ev.clientX-rect.left)*(width/rect.width);
+    let i=Math.floor((px-m.l)/band); i=Math.max(0,Math.min(n-1,i));
+    const x=cx(i);
+    crossLine.setAttribute('x1',x); crossLine.setAttribute('x2',x);
+    panels.forEach((panel,pi)=>{
+      const v=data[i][panel.key];
+      if(v==null){ dots[pi].setAttribute('opacity','0'); }
+      else {
+        const vals=data.map(d=>d[panel.key]);
+        const max=niceCeil(Math.max(...vals.filter(v=>v!=null),1));
+        const top=panelTops[pi];
+        const yy=top+panelH-(v/max)*panelH;
+        dots[pi].setAttribute('opacity','1');
+        dots[pi].setAttribute('cx',x); dots[pi].setAttribute('cy',yy);
+      }
+    });
+    cross.setAttribute('opacity','1');
+    const d=data[i];
+    const html=`<b>${dayLabel(d.date)} ${d.date.slice(0,4)}</b>`+tipRows([
+      ['Purchases',int(d.purchases)],
+      ['Link clicks',int(d.clicks)],
+      ['Spend',gbp(d.spend,2)],
+      ['ROAS',xx(d.roas,2)],
+    ]);
+    const y=ev.clientY-rect.top;
+    showTip(container,html,x,y);
+  }
+  overlay.addEventListener('pointermove',update);
+  overlay.addEventListener('pointerenter',update);
+  overlay.addEventListener('pointerleave',()=>{ cross.setAttribute('opacity','0'); hideTip(container); });
+}
+
+/* ---------- render all ---------- */
+function renderAll(){
+  const p=pal();
+  $$('[data-spark]').forEach(el=>{
+    const key=el.dataset.spark;
+    const vals=DATA.months.map(m=>m[key]);
+    sparkline(el, vals, key==='revenue'?p.c2:p.c1);
+  });
+
+  const spendChart=$('[data-chart="spend-revenue"]');
+  if(spendChart) groupedBars(spendChart, DATA.months, [
+    {label:'Spend',values:DATA.months.map(m=>m.spend),color:p.c1,fmt:v=>gbp(v)},
+    {label:'Revenue',values:DATA.months.map(m=>m.revenue),color:p.c2,fmt:v=>gbp(v)},
+  ], {aria:'Monthly spend and attributed revenue',height:260});
+
+  const roasChart=$('[data-chart="roas"]');
+  if(roasChart) lineChart(roasChart, DATA.months, [
+    {label:'ROAS',values:DATA.months.map(m=>m.roas),color:p.c1,fmt:v=>xx(v,2)},
+  ], {aria:'Monthly ROAS',height:260,average:DATA.totals.roas,avgFmt:v=>xx(v,2),endFmt:v=>xx(v,2),yFmt:v=>v.toFixed(1)+'x'});
+
+  const purchChart=$('[data-chart="purchases"]');
+  if(purchChart) groupedBars(purchChart, DATA.months, [
+    {label:'Purchases',values:DATA.months.map(m=>m.purch),color:p.c1,fmt:v=>int(v)},
+  ], {aria:'Monthly purchases',height:238,directLabels:true});
+
+  const aovChart=$('[data-chart="aov"]');
+  if(aovChart) lineChart(aovChart, DATA.months, [
+    {label:'AOV',values:DATA.months.map(m=>m.aov),color:p.c2,fmt:v=>gbp(v,2)},
+  ], {aria:'Monthly average order value',height:238,average:DATA.totals.aov,avgFmt:v=>gbp(v,2),endFmt:v=>gbp(v,2),yFmt:v=>'£'+v.toFixed(0)});
+
+  const funnelChart=$('[data-chart="funnel"]');
+  if(funnelChart) lineChart(funnelChart, DATA.months, [
+    {label:'Landing view rate',values:DATA.months.map(m=>m.lpvRate),color:p.c1,fmt:v=>pct(v,1),dash:''},
+    {label:'Add-to-cart rate',values:DATA.months.map(m=>m.atcRate),color:p.c2,fmt:v=>pct(v,1),dash:'6 4'},
+    {label:'Checkout rate',values:DATA.months.map(m=>m.checkoutRate),color:p.c3,fmt:v=>pct(v,1),dash:'2 3'},
+    {label:'Conversion rate',values:DATA.months.map(m=>m.convRate),color:p.c4,fmt:v=>pct(v,1),dash:'8 3 2 3'},
+  ], {aria:'Monthly funnel rates',height:300,yFmt:v=>v.toFixed(0)+'%',endFmt:v=>pct(v,1),endLabels:true});
+
+  $$('[data-campaign-chart]').forEach(el=>{
+    const idx=+el.dataset.campaignChart;
+    campaignChart(el, DATA.campaigns[idx]);
+  });
+}
+
+renderAll();
+window.addEventListener('resize', debounce(renderAll, 150));
+if(window.matchMedia){
+  const mq=window.matchMedia('(prefers-color-scheme: dark)');
+  if(mq.addEventListener) mq.addEventListener('change',()=>renderAll());
+}
+if(window.MutationObserver){
+  new MutationObserver(()=>renderAll()).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+}
+</script>
+
+</body>
+</html>
